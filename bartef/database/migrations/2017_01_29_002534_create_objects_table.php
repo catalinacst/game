@@ -19,6 +19,7 @@ class CreateObjectsTable extends Migration
           $table->integer('category_id')->unsigned()->default(0);
           $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
           $table->string('name')->default('');
+          $table->integer('value')->default(0);
           $table->timestamps();
       });
     }
