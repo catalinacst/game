@@ -35,9 +35,14 @@ class BartefController extends Controller
       // Store username
       $user = User::find('1');
       $user->name = $request['username'];
-      $user->save();
       // Store interests
-      
+      $numCategories = Category::All()->count();
+      $interests = '';
+      for ($i = 0; $i < $numCategories; $i++)
+        $interests .= ($request['category'.$i] == 'on') ? '1' : '0';
+      $user->interests = $interests;
+      // Save changes
+      $user->save();
       return redirect('home');
     }
 
