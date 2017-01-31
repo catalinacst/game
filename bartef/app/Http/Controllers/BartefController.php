@@ -46,6 +46,6 @@ class BartefController extends Controller
      *
      */
     public function home() {
-      return 'home';
+      return view('home');
     }
 }

@@ -8,25 +8,20 @@
     <!-- Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Materialize CSS -->
-    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+    {!! Html::style('https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css') !!}
+    <!-- Styles Css -->
+    {!! Html::style('css/style.css') !!}
   </head>
   <body>
 
-    <!-- Dropdown Structure -->
-    <ul id="dropdown1" class="dropdown-content">
-      <li><a href="#!">one</a></li>
-      <li><a href="#!">two</a></li>
-      <li class="divider"></li>
-      <li><a href="#!">three</a></li>
-    </ul>
+    <!-- Navbar -->
     <nav class="teal lighten-2">
       <div class="nav-wrapper container">
-        <a href="#!" class="brand-logo">Logo</a>
+        <a href="home" class="brand-logo">Bartef</a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="sass.html">Sass</a></li>
-          <li><a href="badges.html">Components</a></li>
-          <!-- Dropdown Trigger -->
-          <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Notificaciones</a></li>
+          <li><a href="#">Sobre Nosotros</a></li>
         </ul>
       </div>
     </nav>
@@ -62,8 +57,8 @@
 
 
     <!-- Compiled and minified jQuery -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    {!! Html::script('https://code.jquery.com/jquery-2.1.1.min.js') !!}
     <!-- Compiled and minified JavaScript -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+    {!! Html::script('https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js') !!}
   </body>
 </html>

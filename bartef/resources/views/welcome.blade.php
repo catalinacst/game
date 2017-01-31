@@ -36,8 +36,8 @@
         @endif
           <div class="col s4">
             <p>
-              <input type="checkbox" id={{ $c }} name={{ $c }} />
-              <label for={{ $c }}>{{ $categories[$i]->name }}</label>
+              <input type="checkbox" id={{$c}} name={{$c}} />
+              <label for={{$c}}>{{ $categories[$i]->name }}</label>
             </p>
           </div>
         @endfor
