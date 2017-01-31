@@ -4,251 +4,134 @@
 
 @section('content')
 
-<div class = "#9e9e9e grey" id = "perfil">
-  <div class="row continer">
+<div class = "section" id = "perfil">
+  <div class="row container">
+    <br><br>
 
-    <div class="col s12 m4 l2">
-      <div class="col s10">
-        <br>
-        <h4 class="center">Profile</h4>
+    <!-- Show user name and image -->
+    <div class="col s12 m4 l3">
+      <div>
+        <h3 class="center">Perfil</h4>
       </div>
-      <div class = "col s12">
+      <!-- img -->
+      <div>
         <br>
-        <img src="img/usuario.png">
+        <img class="responsive-img" src="img/usuario.png">
       </div>
-      <div class="col s10">
-        <h5 class="center">About me</h5>
-        <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+      <!-- name -->
+      <div>
+        <br>
+        <h5 class="center light">{{ $users[0]->name }}</h5>
+      </div>
+      <!-- interests -->
+      <div>
+        @foreach($interests as $interest)
+        <div class="chip">
+          {{ $interest }}
+        </div>
+        @endforeach
       </div>
     </div>
-    <div class="col s12 m8 l9"> <!-- Note that "m8 l9" was added -->
-      <br>
-      <br>
+
+    <!-- Panel: Objetos - Explorar - Feedback -->
+    <div class="col s12 m8 l9">
       <div class = "col s12 offset-s1">
         <div class="row">
+
+          <!-- Tabs -->
           <div class="col s12">
             <ul class="tabs">
-              <li class="tab col s3"><a class="active" href="#test1">Mis Cosas</a></li>
-              <li class="tab col s4"><a href="#test2">Bartef's</a></li>
-              <li class="tab col s5"><a href="#test3">Feedback</a></li>
+              <li class="tab col s4"><a href="#objects" class="active">Objetos</a></li>
+              <li class="tab col s4"><a href="#explore">Explorar</a></li>
+              <li class="tab col s4"><a href="#feedback">Feedback</a></li>
             </ul>
           </div>
-          <!-- Llamado  del primer enlace -->
-          <div id="test1" class="col s12">
+
+          <!-- Show the Objects -->
+          <div id="objects" class="col s12">
             <br>
             <div class="row">
-
-              <div class = "col s3 offset-s0">
-                <div class="card">
+              @foreach($users[0]->objects as $object)
+              <div class = "col s4">
+                <div class="card medium">
                   <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="img/libro.jpg">
+                    <img src="img/object.jpg">
                   </div>
                   <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">Articulo 1<i class="material-icons right">more_vert</i></span>
-                    <p><a href="#">Ver más imagenes</a></p>
-                  </div>
-                  <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">Articulo 1<i class="material-icons right">close</i></span>
-                    <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                    <h5>{{ $object->name }}</h5>
+                    <p class="light">{{ $object->category->name }}</p>
                   </div>
                 </div>
               </div>
-
-              <div class = "col s3">
-                <div class="card">
-                  <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="img/libro.jpg">
-                  </div>
-                  <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">Articulo 2<i class="material-icons right">more_vert</i></span>
-                    <p><a href="#">Ver más imagenes</a></p>
-                  </div>
-                  <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">Articulo 2<i class="material-icons right">close</i></span>
-                    <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class = "col s3">
-                <div class="card">
-                  <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="img/libro.jpg">
-                  </div>
-                  <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">Articulo 3<i class="material-icons right">more_vert</i></span>
-                    <p><a href="#">Ver más imagenes</a></p>
-                  </div>
-                  <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">Articulo 3<i class="material-icons right">close</i></span>
-                    <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class = "col s3">
-                <div class="card">
-                  <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="img/libro.jpg">
-                  </div>
-                  <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">Articulo 4<i class="material-icons right">more_vert</i></span>
-                    <p><a href="#">Ver más imagenes</a></p>
-                  </div>
-                  <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">Articulo 4<i class="material-icons right">close</i></span>
-                    <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class = "col s3 offset-s0">
-                <div class="card">
-                  <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="img/libro.jpg">
-                  </div>
-                  <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">Articulo 5<i class="material-icons right">more_vert</i></span>
-                    <p><a href="#">Ver más imagenes</a></p>
-                  </div>
-                  <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">Articulo 5<i class="material-icons right">close</i></span>
-                    <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                  </div>
-                </div>
-              </div>
-
+              @endforeach
             </div>
           </div>
 
-          <!-- El segundo llamado, a los Barter's <div class = "col s10 offset-s0">-->
-          <div id="test2" class="col s12">
+          <!-- Explore friends -->
+          <div id="explore" class="col s12">
             <br>
             <div class = "row">
-              <div class = "col s3 offset-s0">
-                 <div class="card">
-                  <div class="card-image waves-effect waves-block waves-light">
-                    <a href="#"><img class="activator" src="img/friendh.png"></a>
-                  </div>
-                     <h6 class="namepad">User</h6>
-                </div>
-              </div>
-
-              <div class = "col s3 offset-s0">
-                <div class="card">
+              @for($i = 1, $size = count($users); $i < $size; $i++)
+              <div class = "col s4">
+                <div class="card medium">
                   <div class="card-image waves-effect waves-block waves-light">
                     <a href="#"><img class="activator" src="img/friendm.png"></a>
                   </div>
-                     <h6 class="namepad">User</h6>
-                </div>
-              </div>
-
-              <div class = "col s3 offset-s0">
-                 <div class="card">
-                  <div class="card-image waves-effect waves-block waves-light">
-                    <a href="#"><img class="activator" src="img/friendh.png"></a>
+                  <div class="card-content">
+                    <h5>{{ $users[$i]->name }}</h6>
                   </div>
-                     <h6 class="namepad">User</h6>
                 </div>
               </div>
+              @endfor
+            </div>
+          </div>
 
-              <div class = "col s3 offset-s0">
-                <div class="card">
-                  <div class="card-image waves-effect waves-block waves-light">
-                    <a href="#"><img class="activator" src="img/friendm.png"></a>
+          <!-- Form feedback -->
+          <div id="feedback" class="col s12">
+            <h2 class="center"> Contactanos </h2>
+
+            <div class="row">
+              <form class="col s12">
+
+                <div class="row">
+                  <div class="input-field col s6">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input id="icon_prefix" type="text" class="validate">
+                    <label for="icon_prefix">First Name</label>
                   </div>
-                     <h6 class="namepad">User</h6>
-                </div>
-              </div>
 
-              <div class = "col s3 offset-s0">
-                 <div class="card">
-                  <div class="card-image waves-effect waves-block waves-light">
-                    <a href="#"><img class="activator" src="img/friendh.png"></a>
+                  <div class="input-field col s6">
+                    <i class="material-icons prefix">phone</i>
+                    <input id="icon_telephone" type="tel" class="validate">
+                    <label for="icon_telephone">Telephone</label>
                   </div>
-                     <h6 class="namepad">User</h6>
                 </div>
-              </div>
 
-              <div class = "col s3 offset-s0">
-                <div class="card">
-                  <div class="card-image waves-effect waves-block waves-light">
-                    <a href="#"><img class="activator" src="img/friendm.png"></a>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <textarea id="textarea1" class="materialize-textarea"></textarea>
+                    <label for="textarea1">Textarea</label>
                   </div>
-                     <h6 class="namepad">User</h6>
                 </div>
-              </div>
 
+                <div class = "right">
+                  <button class="btn waves-effect waves-light" type="submit" name="action">Send
+                    <i class="material-icons right">send</i>
+                  </button>
+                </div>
+
+              </form>
             </div>
 
-          <div id="test3" class="col s12">
-            <h1 class = "center">Encuesta</h1>
-              <div class = "col s3 offset-s0">
-                <div class="card">
-                  <div class="card-image waves-effect waves-block waves-light">
-                    <a href="#"><img class="activator" src="img/friendm.png"></a>
-                  </div>
-                     <h6 class="namepad">User</h6>
-                </div>
-              </div>
           </div>
 
         </div>
       </div>
-
-      <div class = "col s10"></div>
-      <!-- Teal page content
-            <img src="img/fondovinotinto.jpg">
-            This content will be:
-        9-columns-wide on large screens,
-        8-columns-wide on medium screens,
-        12-columns-wide on small screens  -->
-      <div class = "col s12"></div>
     </div>
+    <!-- / Panel: Objetos - Explorar - Feedback -->
+
+    <br><br>
   </div>
 </div>
 
-
-<!-- Comentarios -->
-<div class = "white">
-  <div class = "row container" id = "contactenos">
-    <h2 class = "center"> Contactanos </h2>
-      <div class="row">
-        <form class="col s12">
-          <div class="row">
-            <div class="input-field col s6">
-              <i class="material-icons prefix">account_circle</i>
-              <input id="icon_prefix" type="text" class="validate">
-              <label for="icon_prefix">First Name</label>
-            </div>
-            <div class="input-field col s6">
-              <i class="material-icons prefix">phone</i>
-              <input id="icon_telephone" type="tel" class="validate">
-              <label for="icon_telephone">Telephone</label>
-            </div>
-          </div>
-        </form>
-      </div>
-      <div>
-        <div class="row">
-          <form class="col s12">
-            <div class="row">
-              <div class="input-field col s12">
-                <i class="material-icons prefix">account_circle</i>
-                <input id="icon_prefix" type="text" class="validate">
-                <label for="icon_prefix">Comentarios</label>
-              </div>
-            </div>
-          </form>
-      </div>
-  </div>
-</div>
-
-<div class = "right">
-  <button class="btn waves-effect waves-light" type="submit" name="action">Send
-    <i class="material-icons right">send</i>
-  </button>
-</div>
-
-<br><br>
 @stop

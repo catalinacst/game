@@ -16,8 +16,8 @@ class ObjectsTableSeeder extends Seeder
       $objects = array(
         ['name' => 'Impermeable para moto', 'value' => 10, 'category_id' => 10, 'user_id' => 1, 'created_at' => new DateTime, 'updated_at' => new DateTime],
         ['name' => 'BattleShip', 'value' => 20, 'category_id' => 12, 'user_id' => 1, 'created_at' => new DateTime, 'updated_at' => new DateTime],
-        ['name' => 'Batman Llavero', 'value' => 42, 'category_id' => 13, 'user_id' => 1, 'created_at' => new DateTime, 'updated_at' => new DateTime],
-        ['name' => 'Mouse Logitech Inalambrico', 'value' => 60, 'category_id' => 2, 'user_id' => 1, 'created_at' => new DateTime, 'updated_at' => new DateTime],
+        ['name' => 'Llavero Batman', 'value' => 42, 'category_id' => 13, 'user_id' => 1, 'created_at' => new DateTime, 'updated_at' => new DateTime],
+        ['name' => 'Mouse Inalambrico', 'value' => 60, 'category_id' => 2, 'user_id' => 1, 'created_at' => new DateTime, 'updated_at' => new DateTime],
         ['name' => 'Uncharted 3 Drake Deception', 'value' => 93, 'category_id' => 1, 'user_id' => 1, 'created_at' => new DateTime, 'updated_at' => new DateTime],
         ['name' => 'Gafas de sol', 'value' => 150, 'category_id' => 6, 'user_id' => 1, 'created_at' => new DateTime, 'updated_at' => new DateTime],
         ['name' => 'Guayos Adidas ', 'value' => 150, 'category_id' => 14, 'user_id' => 1, 'created_at' => new DateTime, 'updated_at' => new DateTime],

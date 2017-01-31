@@ -30,10 +30,6 @@
         <!-- Interests -->
         <div class="row">
         @for ($i = 0, $size = count($categories), $c = 'category0'; $i < $size; $i++, $c = 'category'.$i)
-        @if ($i != 0 and $i%3 == 0)
-        </div>
-        <div class="row">
-        @endif
           <div class="col s4">
             <p>
               <input type="checkbox" id={{$c}} name={{$c}} />

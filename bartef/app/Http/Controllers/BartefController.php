@@ -51,6 +51,13 @@ class BartefController extends Controller
      *
      */
     public function home() {
-      return view('home');
+      $users = User::All();
+      $categories = Category::All();
+      $interests = array();
+      for ($i = 0, $str = $users[0]->interests, $size = count($categories); $i < $size; $i++) {
+        if ($str[$i] == '1')
+          array_push($interests, $categories[$i]->name);
+      }
+      return view('home', compact('users', 'interests'));
     }
 }
