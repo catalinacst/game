@@ -11,5 +11,6 @@
 |
 */
 
-Route::get('index', 'BartefController@index');
+Route::get('/', 'BartefController@index');
 Route::get('welcome', 'BartefController@welcome');
+Route::get('store', 'BartefController@store');

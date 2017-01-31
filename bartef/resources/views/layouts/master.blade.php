@@ -2,15 +2,13 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>@yield('title') - Bartef</title>
 
     <!-- Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Compiled and minified CSS -->
+    <!-- Materialize CSS -->
     <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
-
-    <!-- Website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
   <body>
 
@@ -21,8 +19,8 @@
       <li class="divider"></li>
       <li><a href="#!">three</a></li>
     </ul>
-    <nav>
-      <div class="nav-wrapper">
+    <nav class="teal lighten-2">
+      <div class="nav-wrapper container">
         <a href="#!" class="brand-logo">Logo</a>
         <ul class="right hide-on-med-and-down">
           <li><a href="sass.html">Sass</a></li>
@@ -33,11 +31,9 @@
       </div>
     </nav>
 
-    <div class="container">
-      @yield('content')
-    </div>
+    @yield('content')
 
-    <footer class="page-footer">
+    <footer class="page-footer orange">
       <!--
       <div class="container">
         <div class="row">
@@ -59,8 +55,7 @@
       -->
       <div class="footer-copyright">
         <div class="container">
-        © 2014 Copyright Text
-        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
         </div>
       </div>
     </footer>

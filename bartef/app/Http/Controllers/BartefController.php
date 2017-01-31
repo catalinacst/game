@@ -5,11 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Category;
 
 class BartefController extends Controller
 {
     /**
-     *  Display form welcome
+     *  Redirect to welcome
      *
      */
     public function index() {
@@ -17,10 +18,20 @@ class BartefController extends Controller
     }
 
     /**
-     *  Display form welcome
+     *  Display form username and interests
      *
      */
     public function welcome() {
-      return view('welcome');
+      $categories = Category::All();
+      return view('welcome', compact('categories'));
+    }
+
+    /**
+     *  Store the username and interests, then redirect to home
+     *
+     */
+    public function store(Request $request) {
+
+      
     }
 }
