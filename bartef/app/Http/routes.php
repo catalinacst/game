@@ -15,3 +15,4 @@ Route::get('/', 'BartefController@index');
 Route::get('welcome', 'BartefController@welcome');
 Route::get('store', 'BartefController@store');
 Route::get('home', 'BartefController@home');
+Route::get('show/{id}', 'BartefController@show');

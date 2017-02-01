@@ -4,7 +4,7 @@
 
 @section('content')
 
-<div class = "section" id = "perfil">
+<div class = "section">
   <div class="row container">
     <br><br>
 
@@ -16,7 +16,7 @@
       <!-- img -->
       <div>
         <br>
-        <img class="responsive-img" src="img/usuario.png">
+        {!! Html::image('img/usuario.png', 'userimg', array('class' => 'responsive-img')) !!}
       </div>
       <!-- name -->
       <div>
@@ -25,6 +25,7 @@
       </div>
       <!-- interests -->
       <div>
+        <br>
         @foreach($interests as $interest)
         <div class="chip">
           {{ $interest }}
@@ -55,7 +56,7 @@
               <div class = "col s4">
                 <div class="card medium">
                   <div class="card-image waves-effect waves-block waves-light">
-                    <img src="img/object.jpg">
+                    {!! Html::image('img/object.jpg', 'objectimg', array('class' => 'responsive-img')) !!}
                   </div>
                   <div class="card-content">
                     <h5>{{ $object->name }}</h5>
@@ -75,7 +76,7 @@
               <div class = "col s4">
                 <div class="card medium">
                   <div class="card-image waves-effect waves-block waves-light">
-                    <a href="#"><img class="activator" src="img/friendm.png"></a>
+                    <a href="show/{{$users[$i]->id}}"><img class="activator" src="img/friendm.png"></a>
                   </div>
                   <div class="card-content">
                     <h5>{{ $users[$i]->name }}</h6>

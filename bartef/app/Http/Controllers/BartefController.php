@@ -60,4 +60,19 @@ class BartefController extends Controller
       }
       return view('home', compact('users', 'interests'));
     }
+
+    /**
+     *  Show profile user
+     *
+     */
+    public function show($id) {
+      $user = User::find($id);
+      $categories = Category::All();
+      $interests = array();
+      for ($i = 0, $str = $user->interests, $size = count($categories); $i < $size; $i++) {
+        if ($str[$i] == '1')
+          array_push($interests, $categories[$i]->name);
+      }
+      return view('profile', compact('user', 'interests'));
+    }
 }

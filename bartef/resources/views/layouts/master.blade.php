@@ -17,9 +17,9 @@
     <!-- Navbar -->
     <nav class="teal lighten-2">
       <div class="nav-wrapper container">
-        <a href="home" class="brand-logo">Bartef</a>
+        <a href="/welcome" class="brand-logo">Bartef</a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="#">Inicio</a></li>
+          <li><a href="/home">Inicio</a></li>
           <li><a href="#">Notificaciones</a></li>
           <li><a href="#">Sobre Nosotros</a></li>
         </ul>
