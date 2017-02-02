@@ -16,7 +16,7 @@
       <!-- img -->
       <div>
         <br>
-        {!! Html::image('img/usuario.png', 'userimg', array('class' => 'responsive-img')) !!}
+        {!! Html::image('img/users/'.$user->id.'.jpg', 'userimg', array('class' => 'responsive-img')) !!}
       </div>
       <!-- name -->
       <div>

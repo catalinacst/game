@@ -76,10 +76,12 @@
               <div class = "col s4">
                 <div class="card medium">
                   <div class="card-image waves-effect waves-block waves-light">
-                    <a href="show/{{$users[$i]->id}}"><img class="activator" src="img/friendm.png"></a>
+                    <a href="show/{{$users[$i]->id}}">
+                      {!! Html::image('img/users/'.$users[$i]->id.'.jpg', 'userimg', array('class' => 'responsive-img')) !!}
+                    </a>
                   </div>
                   <div class="card-content">
-                    <h5>{{ $users[$i]->name }}</h6>
+                    <h5>{{ $users[$i]->name }}</h5>
                   </div>
                 </div>
               </div>
