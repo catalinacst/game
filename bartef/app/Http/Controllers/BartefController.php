@@ -75,4 +75,14 @@ class BartefController extends Controller
       }
       return view('profile', compact('user', 'interests'));
     }
+
+    /**
+     *  Interface barter
+     *
+     */
+    public function barter($id) {
+      $from = User::find('1');
+      $to = User::find($id);
+      return view('barter', compact('from', 'to'));
+    }
 }
