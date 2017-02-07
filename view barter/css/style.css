@@ -1,0 +1,28 @@
+#inter01{
+	height: 350px;
+	border: 1px solid;
+	border-radius: 25px;
+	padding: 20px 10px;
+
+}
+
+#sub-inter{
+	height: 70px;
+	border-radius: 15px;
+}
+
+.objects01{
+	background: url("../img/4.jpg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.objects02{
+	background: url("../img/27.jpg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+#intercambios{
+	padding-top: 60px;
+}
