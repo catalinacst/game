@@ -10,6 +10,10 @@ class User extends Authenticatable
       return $this->hasMany('App\Object');
     }
 
+    public function interests() {
+      return $this->belongsToMany('App\Category', 'category_user');
+    }
+
     /**
      * The table associated with the model.
      *
