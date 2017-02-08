@@ -26,9 +26,9 @@
       <!-- interests -->
       <div>
         <br>
-        @foreach($interests as $interest)
+        @foreach($users[0]->interests as $interest)
         <div class="chip">
-          {{ $interest }}
+          {{ $interest->name }}
         </div>
         @endforeach
       </div>

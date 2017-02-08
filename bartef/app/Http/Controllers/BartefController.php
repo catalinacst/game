@@ -36,13 +36,11 @@ class BartefController extends Controller
       $user = User::find('1');
       $user->name = $request['username'];
       // Store interests
+      $user->interests()->detach();
       $numCategories = Category::All()->count();
-      $interests = '';
       for ($i = 0; $i < $numCategories; $i++)
-        $interests .= ($request['category'.$i] == 'on') ? '1' : '0';
-      $user->interests = $interests;
-      // Save changes
-      $user->save();
+        if ($request['category'.$i] == 'on')
+          $user->interests()->attach($i+1);
       return redirect('home');
     }
 
@@ -52,13 +50,7 @@ class BartefController extends Controller
      */
     public function home() {
       $users = User::All();
-      $categories = Category::All();
-      $interests = array();
-      for ($i = 0, $str = $users[0]->interests, $size = count($categories); $i < $size; $i++) {
-        if ($str[$i] == '1')
-          array_push($interests, $categories[$i]->name);
-      }
-      return view('home', compact('users', 'interests'));
+      return view('home', compact('users'));
     }
 
     /**
@@ -67,13 +59,7 @@ class BartefController extends Controller
      */
     public function show($id) {
       $user = User::find($id);
-      $categories = Category::All();
-      $interests = array();
-      for ($i = 0, $str = $user->interests, $size = count($categories); $i < $size; $i++) {
-        if ($str[$i] == '1')
-          array_push($interests, $categories[$i]->name);
-      }
-      return view('profile', compact('user', 'interests'));
+      return view('profile', compact('user'));
     }
 
     /**
