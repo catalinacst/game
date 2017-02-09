@@ -42,9 +42,9 @@
           <!-- Tabs -->
           <div class="col s12">
             <ul class="tabs">
-              <li class="tab col s4"><a href="#objects" class="active">Objetos</a></li>
-              <li class="tab col s4"><a href="#explore">Explorar</a></li>
-              <li class="tab col s4"><a href="#feedback">Feedback</a></li>
+              <li class="tab col s1 m3 l4"><a href="#objects" class="active">Objetos</a></li>
+              <li class="tab col s1 m3 l4"><a href="#explore">Explorar</a></li>
+              <li class="tab col s1 m3 l4"><a href="#feedback">Feedback</a></li>
             </ul>
           </div>
 
