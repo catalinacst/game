@@ -34,7 +34,7 @@
     <br><br>
     <!-- Button Proponer -->
     <div class="center">
-      <button class="btn waves-effect waves-light orange btn-large" type="submit" onclick="foo()">Proponer
+      <button class="btn waves-effect waves-light orange btn-large" type="submit" onclick="main()">Proponer
         <i class="material-icons right">send</i>
       </button>
     </div>
@@ -44,33 +44,5 @@
 @stop
 
 @section('script')
-<script>
-var n;
-var value;
-var weight;
-
-function solver(id, remW) {
-  if (remW == 0 || id == n) return 0;
-  if (weight[id] > remW) return solver(id + 1, remW);
-  return Math.max(solver(id + 1, remW), value[id] + solver(id + 1, remW - weight[id]));
-}
-
-function foo() {
-  n = 0;
-  value = [];
-  weight = [];
-  var acc = 0;
-  $('.left:checked').each(function() {
-    acc += Number($(this).val());
-  });
-  $('.right').each(function() {
-    var x = Number($(this).val());
-    value.push(x);
-    weight.push(x);
-    n++;
-  });
-  var ans = solver(0, acc);
-  console.log(ans);
-}
-</script>
+  {!! Html::script('js/barter.js') !!}
 @stop

@@ -71,4 +71,27 @@ class BartefController extends Controller
       $to = User::find($id);
       return view('barter', compact('from', 'to'));
     }
+
+    /**
+     *  Interface barter
+     *
+     */
+    public function interests($id) {
+
+      $me = User::find('1');
+      $meObjects = $me->objects;
+      $meInterests = $me->interests;
+
+      $other = User::find($id);
+      $otherObject = $other->objects;
+      $otherInterests = $other->interests;
+
+      return response()->json([
+        $meObjects->toArray(),
+        $meInterests->toArray(),
+        $otherObject->toArray(),
+        $otherInterests->toArray()
+      ]);
+    }
+
 }
