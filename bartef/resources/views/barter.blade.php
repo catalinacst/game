@@ -12,7 +12,7 @@
       <div class="col s4 offset-s1">
         @foreach($from->objects as $object)
         <p>
-          <input type="checkbox" class="left" id="{{$object->name}}" name="{{$object->name}}" value="{{$object->value}}" />
+          <input type="checkbox" class="left" id="{{$object->name}}" name="{{$object->name}}" value="{{$object->id}}" />
           <label for="{{$object->name}}">{{$object->name}}, {{$object->value}}</label>
         </p>
         @endforeach
@@ -23,8 +23,8 @@
         @foreach($to->objects as $object)
           <div>
             <p>
-              <input type="checkbox" class="right" id="{{$object->name}}" name="{{$object->name}}" value="{{$object->value}}" disabled/>
-              <label for="{{$object->name}}">{{$object->name}}, {{$object->value}}</label>
+              <input type="checkbox" class="right" id="object{{$it}}" name="object{{$it}}" value="{{$object->value}}" disabled/>
+              <label for="object{{$it++}}">{{$object->name}}, {{$object->value}}</label>
             </p>
           </div>
         @endforeach

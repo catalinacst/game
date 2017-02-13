@@ -35,7 +35,7 @@
       <!-- Button -->
       <div class="center">
         <br>
-        <a class="waves-effect waves-light btn orange btn-large" href="/barter/{{$user->id}}"><i class="material-icons left">done</i>Intercambio</a>
+        <a class="waves-effect waves-light btn orange btn-large" href="/barter/{{$user->id}}">Intercambiar</a>
       </div>
       <!-- Button -->
       <div class="center">

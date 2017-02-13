@@ -69,7 +69,8 @@ class BartefController extends Controller
     public function barter($id) {
       $from = User::find('1');
       $to = User::find($id);
-      return view('barter', compact('from', 'to'));
+      $it = 0;
+      return view('barter', compact('from', 'to', 'it'));
     }
 
     /**
