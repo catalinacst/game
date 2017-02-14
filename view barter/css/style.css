@@ -1,9 +1,14 @@
 #inter01{
-	height: 350px;
+	height: 250px;
 	border: 1px solid;
 	border-radius: 25px;
 	padding: 20px 10px;
+}
 
+#box{
+	width: 65px;
+	height: 65px;
+	border-radius: 15px;
 }
 
 #sub-inter{
@@ -25,4 +30,13 @@
 
 #intercambios{
 	padding-top: 60px;
+}
+
+#view-objects1{
+	color: #2980b9;
+}
+
+[type="checkbox"] + label {
+  font-size: 17px;
+  color: black;
 }
