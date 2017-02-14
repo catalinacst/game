@@ -1,14 +1,15 @@
-var n = 10;
+var n;
 var k, maxV, maxW, ans;
 var value = new Array(); // value[] -> valor de los objetos desde el punto de vista de el usuario
 var weight = new Array(); // weight[] -> valor de los objetos desde el punto de vista de la maquina
 
-var id = 4, numCategories;
+var idUser = document.getElementById('idUser').value, numCategories;
 var numMyInterest = 0, myObjects = new Array(), myInterests = new Array();
 var numTheirInterest = 0, ObjectsObjects = new Array(), theirInterests = new Array();
-var route = 'http://localhost:8000/interests/'+id;
+var route = 'http://localhost:8000/interests/'+idUser;
 
 $.get(route, function(res) {
+  n = res[2].length;
   numCategories = 15;
   numMyInterest = res[1].length;
   numTheirInterest = res[3].length;
@@ -25,11 +26,11 @@ $.get(route, function(res) {
   });
 
   res[2].forEach(function(object) {
-    var v = object.value;
-    //if (myInterests[object.category_id])
-    //  v *= 2 - numMyInterest / numCategories;
+    var v = Number(object.value);
+    if (myInterests[object.category_id])
+      v *= 2 - numMyInterest / numCategories;
     value.push(v);
-    var w = object.value;
+    var w = Number(object.value);
     if (theirInterests[object.category_id])
       w *= 2 - numTheirInterest / numCategories;
     weight.push(w);
@@ -58,9 +59,9 @@ function main() {
 	k = 0;
   ans = '';
 	$('.left:checked').each(function() {
-    var id = $(this).val();
-    var obj = myObjects[id];
-    var x = obj.value;
+    var idObj = $(this).val();
+    var obj = myObjects[idObj];
+    var x = Number(obj.value);
     if (theirInterests[obj.category_id])
       x *= 2 - numTheirInterest / numCategories;
     k += x;
@@ -70,6 +71,8 @@ function main() {
   console.log(maxV);
   console.log(maxW);
   //console.log(ans);
-  for (var i = 0; i < ans.length; i++)
-    $('#object'+i).prop('checked', ans[i] == '1');
+  for (var i = 0; i < ans.length; i++) {
+    $('#right'+i).prop('checked', ans[i] == '1');
+    $('#right'+i).prop('disabled', ans[i] != '1');
+  }
 }

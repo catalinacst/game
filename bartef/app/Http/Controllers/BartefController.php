@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Category;
 use App\User;
+use App\Object;
 
 class BartefController extends Controller
 {
@@ -35,6 +36,7 @@ class BartefController extends Controller
       // Store username
       $user = User::find('1');
       $user->name = $request['username'];
+      $user->save();
       // Store interests
       $user->interests()->detach();
       $numCategories = Category::All()->count();
@@ -69,30 +71,45 @@ class BartefController extends Controller
     public function barter($id) {
       $from = User::find('1');
       $to = User::find($id);
-      $it = 0;
-      return view('barter', compact('from', 'to', 'it'));
+      $itl = 0;
+      $itr = 0;
+      return view('barter', compact('from', 'to', 'itl', 'itr'));
     }
 
     /**
-     *  Interface barter
+     *  Petition AJAX return JSON: myObjects, myInterests
+     *                             theirObject, theirInterests
      *
      */
     public function interests($id) {
 
       $me = User::find('1');
-      $meObjects = $me->objects;
-      $meInterests = $me->interests;
+      $myObjects = $me->objects;
+      $myInterests = $me->interests;
 
       $other = User::find($id);
-      $otherObject = $other->objects;
-      $otherInterests = $other->interests;
+      $theirObject = $other->objects;
+      $theirInterests = $other->interests;
 
       return response()->json([
-        $meObjects->toArray(),
-        $meInterests->toArray(),
-        $otherObject->toArray(),
-        $otherInterests->toArray()
+        $myObjects->toArray(),
+        $myInterests->toArray(),
+        $theirObject->toArray(),
+        $theirInterests->toArray()
       ]);
     }
 
+    /**
+     *  Exchange: Update ids in the objects
+     *
+     */
+    public function exchange(Request $request, $id) {
+      $arr = $request->all();
+      foreach ($arr as $key => $value) {
+        $object = Object::find($value);
+        $object->user_id = ($key[0] == 'l') ? $id : '1';
+        $object->save();
+      }
+      return redirect('show/'.$id);
+    }
 }

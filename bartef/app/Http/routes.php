@@ -18,3 +18,4 @@ Route::get('home', 'BartefController@home');
 Route::get('show/{id}', 'BartefController@show');
 Route::get('barter/{id}', 'BartefController@barter');
 Route::get('interests/{id}', 'BartefController@interests');
+Route::get('exchange/{id}', 'BartefController@exchange');

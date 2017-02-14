@@ -74,7 +74,7 @@ class ObjectsTableSeeder extends Seeder
         ['name' => 'Aspiradora manual', 'value' => 150, 'category_id' => 4, 'user_id' => 2, 'created_at' => new DateTime, 'updated_at' => new DateTime],
         ['name' => 'Espejo con camara', 'value' => 190, 'category_id' => 11, 'user_id' => 1, 'created_at' => new DateTime, 'updated_at' => new DateTime],
         ['name' => 'Audifonos Beats', 'value' => 340, 'category_id' => 2, 'user_id' => 5, 'created_at' => new DateTime, 'updated_at' => new DateTime],
-        ['name' => 'SmartWatch Gear', 'value' => 560, 'category_id' => 3, 'user_id' => 5, 'created_at' => new DateTime, 'updated_at' => new DateTime],
+        ['name' => 'SmartWatch Gear', 'value' => 1500, 'category_id' => 3, 'user_id' => 5, 'created_at' => new DateTime, 'updated_at' => new DateTime],
         ['name' => 'Camara Canon Reflex', 'value' => 3800, 'category_id' => 15, 'user_id' => 6, 'created_at' => new DateTime, 'updated_at' => new DateTime],
         ['name' => 'Yamaha BWS X', 'value' => 5580, 'category_id' => 10, 'user_id' => 8, 'created_at' => new DateTime, 'updated_at' => new DateTime],
         ['name' => 'Mazda 3 Touring', 'value' => 30000, 'category_id' => 11, 'user_id' => 9, 'created_at' => new DateTime, 'updated_at' => new DateTime],
