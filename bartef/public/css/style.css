@@ -22,3 +22,42 @@
     overflow: hidden;
     transition: color .28s ease;
 }
+
+#inter01{
+	height: 250px;
+	border: 1px solid;
+	border-radius: 25px;
+	padding: 20px 10px;
+}
+
+#box{
+	width: 65px;
+	height: 65px;
+	border-radius: 15px;
+}
+
+.sub-inter{
+	height: 70px;
+	border-radius: 15px;
+}
+
+.objects01{
+	background: url("../img/4.jpg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.objects02{
+	background: url("../img/27.jpg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+#view-objects1{
+	color: #2980b9;
+}
+
+[type="checkbox"] + label {
+  font-size: 17px;
+  color: black;
+}
