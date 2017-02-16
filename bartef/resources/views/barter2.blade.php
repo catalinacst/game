@@ -5,165 +5,53 @@
 @section('content')
 <!-- Exchange zone -->
 <div class = "section">
+  <!-- Usernames and Objects -->
   <div class="row">
     <!--- User 1 -->
     <div class="col s12 l6 m12">
       <!-- Username -->
-      <h4 class="center">Usuario 1</h4>
-
-      <div class="#b0bec5 blue-grey lighten-3"  id = "inter01">
+      <h4 class="center">{{ $from->name }}</h4>
+      <!-- Objects -->
+      <div class="#b0bec5 blue-grey lighten-3 inter01">
         <div class="row">
+          <!-- foreach -->
           <div class="col s2">
             <div class="objects01 sub-inter"></div>
           </div>
-
-          <div class="col s2">
-            <div class="objects01" id = "sub-inter">
-            </div>
-          </div>
-
-          <div class="col s2">
-            <div class="objects01" id = "sub-inter">
-            </div>
-          </div>
-
-          <div class="col s2">
-            <div class="objects01" id = "sub-inter">
-            </div>
-          </div>
-
-          <div class="col s2">
-            <div class="objects01" id = "sub-inter">
-            </div>
-          </div>
-
-          <div class="col s2">
-            <div class="objects01" id = "sub-inter">
-            </div>
-          </div>
-        </div>
-        <!-- Segunda Columna -->
-        <div class="row">
-          <div class="col s2">
-            <div class="black" id = "sub-inter">
-            </div>
-          </div>
-
-          <div class="col s2">
-            <div class="black" id = "sub-inter">
-            </div>
-          </div>
-
-          <div class="col s2">
-            <div class="black" id = "sub-inter">
-            </div>
-          </div>
-
-          <div class="col s2">
-            <div class="black" id = "sub-inter">
-            </div>
-          </div>
-
-          <div class="col s2">
-            <div class="black" id = "sub-inter">
-            </div>
-          </div>
-
-          <div class="col s2">
-            <div class="black" id = "sub-inter">
-            </div>
-          </div>
+          <!-- end foreach -->
         </div>
       </div>
     </div>
-    <!--- Usuario 2 -->
+    <!--- User 2 -->
     <div class="col s12 l6 m12">
-      <h4 class="center">Usuario 2</h4>
-      <div class="#b0bec5 blue-grey lighten-3"  id = "inter01">
-        <!-- Primera Columna objects02 -->
+      <!-- Username -->
+      <h4 class="center">{{ $to->name }}</h4>
+      <!-- Objects -->
+      <div class="#b0bec5 blue-grey lighten-3 inter01">
         <div class="row">
+          <!-- foreach -->
           <div class="col s2">
-            <div class="objects02 materialboxed" data-caption="A picture" id = "sub-inter">
-            </div>
+            <div class="objects02 materialboxed sub-inter" data-caption="A picture"></div>
           </div>
-
-          <div class="col s2">
-            <div class="objects02 materialboxed" data-caption="A picture" id = "sub-inter">
-            </div>
-          </div>
-
-          <div class="col s2">
-            <div class="objects02 materialboxed" data-caption="A picture" id = "sub-inter">
-            </div>
-          </div>
-
-          <div class="col s2">
-            <div class="objects02 materialboxed" data-caption="A picture" id = "sub-inter">
-            </div>
-          </div>
-
-          <div class="col s2">
-            <div class="objects02 materialboxed" data-caption="A picture" id = "sub-inter">
-            </div>
-          </div>
-
-          <div class="col s2">
-            <div class="objects02 materialboxed" data-caption="A picture" id = "sub-inter">
-            </div>
-          </div>
-        </div>
-
-        <!-- Segunda Columna -->
-        <div class="row">
-          <div class="col s2">
-            <div class="black materialboxed" data-caption="A picture" id="sub-inter">
-            </div>
-          </div>
-
-          <div class="col s2">
-            <div class="black materialboxed" data-caption="A picture" id="sub-inter">
-            </div>
-          </div>
-
-          <div class="col s2">
-            <div class="black materialboxed" data-caption="A picture" id="sub-inter">
-            </div>
-          </div>
-
-          <div class="col s2">
-            <div class="black materialboxed" data-caption="A picture" id="sub-inter">
-            </div>
-          </div>
-
-          <div class="col s2">
-            <div class="black materialboxed" data-caption="A picture" id="sub-inter">
-            </div>
-          </div>
-
-          <div class="col s2">
-            <div class="black materialboxed" data-caption="A picture" id="sub-inter">
-            </div>
-          </div>
+          <!-- end foreach -->
         </div>
       </div>
     </div>
   </div>
-  <!--- Botones Regresar, Proponer o Aceptar -->
-  <div class = "col s12">
-    <div class = "center">
-      <a class="waves-effect waves-light btn black">Regresar</a>
-      <a class="btn-floating btn-large waves-effect waves-light black"><i class="mdi-content-add"></i></a>
-      <a class="waves-effect waves-light btn black">Proponer</a>
+  <!-- Buttons Regresar, Proponer or Aceptar -->
+  <div class = "center">
+      <a class="waves-effect waves-light btn">Regresar</a>
+      <a class="btn-floating btn-large waves-effect waves-light orange"><i class="material-icons right">done</i></a>
+      <a class="waves-effect waves-light btn">Proponer</a>
     </div>
-  </div>
 </div>
 
 <!-- Visualización Objetos -->
 <div class="section">
   <div class = "container">
     <div class="row">
-      <!--- Lista Mis Cosas -->
       <br>
+      <!-- Mis Cosas -->
       <div class="row">
         <div class="col s8">
           <h3><center>Mis cosas</center></h3>
