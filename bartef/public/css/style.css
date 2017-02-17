@@ -1,3 +1,5 @@
+/* PROFILES */
+
 .tabs .tab a:hover, .tabs .tab a.active {
     background-color: rgba(67, 68, 67, 0.82);
     color: #fffbfb;
@@ -30,7 +32,9 @@
 	padding: 20px 10px;
 }
 
-#box{
+/* EXCHANGE ZONE */
+
+.box{
 	width: 65px;
 	height: 65px;
 	border-radius: 15px;
@@ -51,13 +55,4 @@
 	background: url("../img/27.jpg");
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
-}
-
-#view-objects1{
-	color: #2980b9;
-}
-
-[type="checkbox"] + label {
-  font-size: 17px;
-  color: black;
 }
