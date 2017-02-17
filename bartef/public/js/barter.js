@@ -58,8 +58,11 @@ function main() {
 	maxV = -1;
 	k = 0;
   ans = '';
+  $("#myBoxes").empty();
+  $("#theirBoxes").empty();
 	$('.left:checked').each(function() {
     var idObj = $(this).val();
+    $("#myBoxes").append("<div class='col s2'><img src='http://localhost:8000/img/objects/"+idObj+".jpg' alt='img-"+idObj+"' class='sub-inter materialboxed'></div>");
     var obj = myObjects[idObj];
     var x = Number(obj.value);
     if (theirInterests[obj.category_id])
@@ -74,5 +77,8 @@ function main() {
   for (var i = 0; i < ans.length; i++) {
     $('#right'+i).prop('checked', ans[i] == '1');
     $('#right'+i).prop('disabled', ans[i] != '1');
+    var idObj = $('#right'+i).val();
+    if (ans[i] == '1')
+      $("#theirBoxes").append("<div class='col s2'><img src='http://localhost:8000/img/objects/"+idObj+".jpg' alt='img-"+idObj+"' class='sub-inter materialboxed'></div>");
   }
 }
