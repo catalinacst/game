@@ -48,15 +48,15 @@
             </ul>
           </div>
 
-          <!-- Show the Objects -->
+          <!-- Show the Objects 38*180 -->
           <div id="objects" class="col s12">
             <br>
             <div class="row">
               @foreach($users[0]->objects as $object)
               <div class = "col s4">
-                <div class="card medium">
+                <div class="card small vertical">
                   <div class="card-image waves-effect waves-block waves-light">
-                    {!! Html::image('img/objects/'.$object->id.'.jpg', 'objectimg', array('class' => 'responsive-img')) !!}
+                    {!! Html::image('img/objects/'.$object->id.'.jpg', 'objectimg', array('class' => 'imgbarter' )) !!}
                   </div>
                   <div class="card-content">
                     <h5>{{ $object->name }}</h5>
@@ -91,38 +91,12 @@
 
           <!-- Form feedback -->
           <div id="feedback" class="col s12">
-            <h2 class="center"> Contactanos </h2>
-
+            <h2 class="center"> Formulario </h2>
+              <p>Si ya has realizado los intercambios necesarios, ayudanos respondiendo las siguientes preguntas.</p>
             <div class="row">
               <form class="col s12">
-
-                <div class="row">
-                  <div class="input-field col s6">
-                    <i class="material-icons prefix">account_circle</i>
-                    <input id="icon_prefix" type="text" class="validate">
-                    <label for="icon_prefix">First Name</label>
-                  </div>
-
-                  <div class="input-field col s6">
-                    <i class="material-icons prefix">phone</i>
-                    <input id="icon_telephone" type="tel" class="validate">
-                    <label for="icon_telephone">Telephone</label>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="input-field col s12">
-                    <textarea id="textarea1" class="materialize-textarea"></textarea>
-                    <label for="textarea1">Textarea</label>
-                  </div>
-                </div>
-
-                <div class = "right">
-                  <button class="btn waves-effect waves-light" type="submit" name="action">Send
-                    <i class="material-icons right">send</i>
-                  </button>
-                </div>
-
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdqbz1W5DO-o-Mr1POp7-Gn1QH8BcnWJ1llpnwugxdRJ4Kimg/viewform?embedded=true"
+                width="600" height="1300" frameborder="0" marginheight="20" marginwidth="0">Cargando...</iframe>
               </form>
             </div>
 

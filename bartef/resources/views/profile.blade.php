@@ -56,9 +56,9 @@
             <div class="row">
               @foreach($user->objects as $object)
               <div class = "col s4">
-                <div class="card medium">
-                  <div class="card-image waves-effect waves-block waves-light">
-                    {!! Html::image('img/objects/'.$object->id.'.jpg', 'objectimg', array('class' => 'responsive-img')) !!}
+                <div class="card small">
+                  <div class="card-image waves-effect waves-block waves-light imgbarter">
+                    {!! Html::image('img/objects/'.$object->id.'.jpg', 'objectimg', array('class' => 'imgbarter')) !!}
                   </div>
                   <div class="card-content">
                     <h5>{{ $object->name }}</h5>
