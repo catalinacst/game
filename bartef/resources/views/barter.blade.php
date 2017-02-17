@@ -14,13 +14,9 @@
       <!-- Username -->
       <h4 class="center">{{ $from->name }}</h4>
       <!-- Objects proposed -->
-      <div class="#b0bec5 blue-grey lighten-3 inter01">
-        <div class="row">
-          <!-- foreach -->
-          <div class="col s2">
-            <div class="objects01 sub-inter"></div>
-          </div>
-          <!-- end foreach -->
+      <div class="grey darken-1 inter">
+        <div class="row" id="myBoxes">
+          <!-- Boxes -->
         </div>
       </div>
     </div>
@@ -29,13 +25,9 @@
       <!-- Username -->
       <h4 class="center">{{ $to->name }}</h4>
       <!-- Objects proposed -->
-      <div class="#b0bec5 blue-grey lighten-3 inter01">
-        <div class="row">
-          <!-- foreach -->
-          <div class="col s2">
-            <div class="objects02 materialboxed sub-inter" data-caption="A picture"></div>
-          </div>
-          <!-- end foreach -->
+      <div class="grey darken-1 inter">
+        <div class="row" id="theirBoxes">
+          <!-- Boxes -->
         </div>
       </div>
     </div>
