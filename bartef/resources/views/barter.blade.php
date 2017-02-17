@@ -55,56 +55,54 @@
 
 <!-- Display objects -->
 <div class="section">
-  <div class = "container">
-    <form action="/exchange/{{$to->id}}" id="form-exchange">
-      <div class="row">
-        <!-- My objects -->
-        <div class="col s6">
-          <!-- Collection my objects -->
-          <ul class="collection with-header">
-            <!-- Header Collection -->
-            <li class="collection-header"><h4>Mis cosas</h4></li>
-            <!-- Body Collection -->
-            @foreach($from->objects as $object)
-            <li class="collection-item avatar">
-              {!! Html::image('img/objects/'.$object->id.'.jpg', 'img', array('class' => 'circle')) !!}
-              <span class="title">{{$object->name}}</span>
-              <p>Categoria: {{$object->category->name}} <br>
-                 Valor aprox: ${{$object->value}}
-              </p>
-              <p class="secondary-content">
-                <input type="checkbox" class="left" id="left{{$itl}}" name="left{{$itl}}" value="{{$object->id}}" />
-                <label for="left{{$itl++}}"></label>
-              </p>
-            </li>
-            @endforeach
-          </ul>
-        </div>
-        <!-- Their objects -->
-        <div class="col s6">
-          <!-- Collection their objects -->
-          <ul class="collection with-header">
-            <!-- Header Collection -->
-            <li class="collection-header"><h4>Sus cosas</h4></li>
-            <!-- Body Collection -->
-            @foreach($to->objects as $object)
-            <li class="collection-item avatar">
-              {!! Html::image('img/objects/'.$object->id.'.jpg', 'img', array('class' => 'circle')) !!}
-              <span class="title">{{$object->name}}</span>
-              <p>Categoria: {{$object->category->name}} <br>
-                 Valor aprox: ${{$object->value}}
-              </p>
-              <p class="secondary-content">
-                <input type="checkbox" class="right" id="right{{$itr}}" name="right{{$itr}}" value="{{$object->id}}" disabled/>
-                <label for="right{{$itr++}}"></label>
-              </p>
-            </li>
-            @endforeach
-          </ul>
-        </div>
+  <form action="/exchange/{{$to->id}}" id="form-exchange">
+    <div class="row">
+      <!-- My objects -->
+      <div class="col s6">
+        <!-- Collection my objects -->
+        <ul class="collection with-header">
+          <!-- Header Collection -->
+          <li class="collection-header"><h4>Mis cosas</h4></li>
+          <!-- Body Collection -->
+          @foreach($from->objects as $object)
+          <li class="collection-item avatar">
+            {!! Html::image('img/objects/'.$object->id.'.jpg', 'img', array('class' => 'circle materialboxed')) !!}
+            <span class="title">{{$object->name}}</span>
+            <p>Categoria: {{$object->category->name}} <br>
+               Valor aprox: ${{$object->value}}
+            </p>
+            <p class="secondary-content">
+              <input type="checkbox" class="left" id="left{{$itl}}" name="left{{$itl}}" value="{{$object->id}}" />
+              <label for="left{{$itl++}}"></label>
+            </p>
+          </li>
+          @endforeach
+        </ul>
       </div>
-    </form>
-  </div>
+      <!-- Their objects -->
+      <div class="col s6">
+        <!-- Collection their objects -->
+        <ul class="collection with-header">
+          <!-- Header Collection -->
+          <li class="collection-header"><h4>Sus cosas</h4></li>
+          <!-- Body Collection -->
+          @foreach($to->objects as $object)
+          <li class="collection-item avatar">
+            {!! Html::image('img/objects/'.$object->id.'.jpg', 'img', array('class' => 'circle materialboxed')) !!}
+            <span class="title">{{$object->name}}</span>
+            <p>Categoria: {{$object->category->name}} <br>
+               Valor aprox: ${{$object->value}}
+            </p>
+            <p class="secondary-content">
+              <input type="checkbox" class="right" id="right{{$itr}}" name="right{{$itr}}" value="{{$object->id}}" disabled/>
+              <label for="right{{$itr++}}"></label>
+            </p>
+          </li>
+          @endforeach
+        </ul>
+      </div>
+    </div>
+  </form>
 </div>
 @stop
 
