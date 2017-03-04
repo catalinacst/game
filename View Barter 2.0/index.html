@@ -1,0 +1,204 @@
+
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <link rel="stylesheet" href="css/style.css">
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Bartef I</title>
+    </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="teal lighten-2">
+      <div class="nav-wrapper container">
+        <a href="/welcome" class="brand-logo">Bartef</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="/home">Inicio</a></li>
+          <li><a href="#">Notificaciones</a></li>
+          <li><a href="#">Sobre Nosotros</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Exchange zone -->
+    <div class = "grey lighten-2" id = "intercambios"> <!-- <img src="img/venta.jpg">  -->
+      <div class="row">
+        <!--- User 1 -->
+        <div class="col s12 l6 m12">
+          <!-- Username -->
+          <h4 class="center">Usuario 1</h4>
+          <!-- Objects proposed -->
+          <div class="grey lighten-1"  id = "inter01">
+            <!-- Primera Columna - Boxes -->
+            <div class="row">
+              <div class="col s2">
+                <div class="objects01" id = "sub-inter">
+                </div>
+              </div>
+              <div class="col s1">
+                <!-- Modal Trigger - Boton más -->
+                <a class="waves-effect btn-floating btn-large waves-light black" href="#modal1"><i class="material-icons">add</i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--- User 2 -->
+        <div class="col s12 l6 m12">
+          <!-- Username -->
+          <h4 class="center">Usuario 2</h4>
+          <!-- Objects proposed -->
+          <div class="grey lighten-1" id = "inter01">
+            <div class="row" id="theirBoxes">
+              <!-- Boxes -->
+              <div class="col s2">
+                <div class="objects02 materialboxed" data-caption="A picture" id = "sub-inter">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Buttons Regresar, Proponer or Aceptar -->
+      <div class = "center">
+          <!-- Back to Home -->
+          <a class="waves-effect waves-light btn teal lighten-2" href="/home">Regresar</a>
+          <!-- Call main() Quien debe llamar la funcion ahora debe ser el boton que esta dentro del modal (Proponer)-->
+          <a class="waves-effect waves-light btn teal lighten-2" onclick="main()">Aceptar</a>
+      </div>
+    </div>
+
+    <br>
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal bottom-sheet">
+      <div class="modal-content">
+        <!-- Mis Cosas -->
+        <div class="row">
+          <div class="col s6">
+            <h5>Mis intereses</h5>
+            <div class="chip">
+              Computadores
+            </div>
+            <div class="chip">
+              Televisores
+            </div>
+            <ul class="collection with-header">
+              <li class="collection-header"><h4 class="center-align">Mis cosas</h4></li>
+              <li class="collection-item avatar">
+                <img src="img/27.jpg" alt="" class="circle materialboxed">
+                <span class="title">Title</span>
+                <p>First Line <br>
+                  Second Line
+                </p>
+                <p class="secondary-content">
+                  <input type="checkbox" id="test6"/>
+                  <label for="test6"></label>
+                </p>
+              </li>
+              <li class="collection-item avatar">
+                <img src="img/4.jpg" alt="" class="circle materialboxed">
+                <span class="title">Title</span>
+                <p>First Line <br>
+                  Second Line
+                </p>
+                <p class="secondary-content">
+                  <input type="checkbox" id="test7"/>
+                  <label for="test7"></label>
+                </p>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Sus Cosas -->
+          <div class="col s5 offset-s1">
+            <h5>Sus intereses</h5>
+            <div class="chip">
+              Computadores
+            </div>
+            <div class="chip">
+              Televisores
+            </div>
+            <ul class="collection with-header">
+            <li class="collection-header"><h4 class="center-align">Sus cosas</h4></li>
+            <li class="collection-item avatar">
+              <img src="img/venta.jpg" alt="" class="circle materialboxed">
+              <span class="title">Title</span>
+              <p>First Line <br>
+                Second Line
+              </p>
+              <p class="secondary-content">
+                <input type="checkbox" id="test8"/>
+                <label for="test8"></label>
+              </p>
+            </li>
+            <li class="collection-item avatar">
+              <img src="img/27.jpg" alt="" class="circle materialboxed">
+              <span class="title">Title</span>
+              <p>First Line <br>
+                Second Line
+              </p>
+              <p class="secondary-content">
+                <input type="checkbox" id="test9"/>
+                <label for="test9"></label>
+              </p>
+            </li>
+          </ul>
+          </div>
+
+        </div>
+      </div>
+      <div class="modal-footer">
+        <div class="row">
+          <div class="col s7">
+              <a href="#!" class="btn waves-effect waves-teal black">Proponer</a>
+              <br>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <!-- Footer -->
+    <footer class="page-footer black">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Footer Content</h5>
+            <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-copyright">
+        <div class="container">
+        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        </div>
+      </div>
+    </footer>
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+
+    <script type = "text/javascript">
+      $(document).ready( function(){
+        $('select').material_select();
+        $('.button-collapse').sideNav();
+        $('#modal1').modal();
+      });
+    </script>
+  </body>
+</html>
