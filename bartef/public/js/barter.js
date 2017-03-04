@@ -5,7 +5,7 @@ var weight = new Array(); // weight[] -> valor de los objetos desde el punto de 
 
 var idUser = document.getElementById('idUser').value, numCategories;
 var numMyInterest = 0, myObjects = new Array(), myInterests = new Array();
-var numTheirInterest = 0, ObjectsObjects = new Array(), theirInterests = new Array();
+var numTheirInterest = 0, theirObjects = new Array(), theirInterests = new Array();
 var route = 'http://localhost:8000/interests/'+idUser;
 
 $.get(route, function(res) {
@@ -26,6 +26,7 @@ $.get(route, function(res) {
   });
 
   res[2].forEach(function(object) {
+    theirObjects[object.id] = object;
     var v = Number(object.value);
     if (myInterests[object.category_id])
       v *= 2 - numMyInterest / numCategories;
@@ -64,21 +65,25 @@ function main() {
     var idObj = $(this).val();
     $("#myBoxes").append("<div class='col s2'><img src='http://localhost:8000/img/objects/"+idObj+".jpg' alt='img-"+idObj+"' class='sub-inter materialboxed'></div>");
     var obj = myObjects[idObj];
+    console.log(obj.id, obj.value);
     var x = Number(obj.value);
     if (theirInterests[obj.category_id])
       x *= 2 - numTheirInterest / numCategories;
     k += x;
 	});
+  console.log();
   solver(0, 0, 0, '');
-  console.log(k);
-  console.log(maxV);
-  console.log(maxW);
-  //console.log(ans);
   for (var i = 0; i < ans.length; i++) {
     $('#right'+i).prop('checked', ans[i] == '1');
     $('#right'+i).prop('disabled', ans[i] != '1');
+    if (ans[i] != '1') continue;
     var idObj = $('#right'+i).val();
-    if (ans[i] == '1')
-      $("#theirBoxes").append("<div class='col s2'><img src='http://localhost:8000/img/objects/"+idObj+".jpg' alt='img-"+idObj+"' class='sub-inter materialboxed'></div>");
+    var obj = theirObjects[idObj];
+    console.log(obj.id, obj.value);
+    $("#theirBoxes").append("<div class='col s2'><img src='http://localhost:8000/img/objects/"+idObj+".jpg' alt='img-"+idObj+"' class='sub-inter materialboxed'></div>");
   }
+  console.log();
+  console.log(k);
+  console.log(maxV);
+  console.log(maxW);
 }
