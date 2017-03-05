@@ -17,6 +17,13 @@
       <div class="grey darken-1 inter">
         <div class="row" id="myBoxes">
           <!-- Boxes -->
+
+          <!-- Modal Trigger - Boton más -->
+          <div class="col s1">
+            <a class="waves-effect btn-floating btn-large waves-light" href="#modal1">
+              <i class="material-icons">add</i>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -32,72 +39,112 @@
       </div>
     </div>
   </div>
-  <!-- Buttons Regresar, Proponer or Aceptar -->
+  <!-- Buttons Regresar and Aceptar -->
   <div class = "center">
-      <!-- Back to Home -->
-      <a class="waves-effect waves-light btn" href="/home">Regresar</a>
       <!-- Accept -->
-      <button class="btn-floating btn btn-large waves-effect waves-light orange" type="submit" form="form-exchange">
-        <i class="material-icons right">done</i>
+      <button class="btn btn-large waves-effect waves-light orange" type="submit" form="form-exchange">
+        Aceptar
       </button>
-      <!-- Call main() -->
-      <a class="waves-effect waves-light btn" onclick="main()">Proponer</a>
-    </div>
+      <br><br>
+      <!-- Back to Home -->
+      <a class="waves-effect waves-light btn teal lighten-2" href="/home">
+        Regresar
+      </a>
+  </div>
 </div>
-
-<!-- Display objects -->
-<div class="section">
-  <form action="/exchange/{{$to->id}}" id="form-exchange">
-    <div class="row">
-      <!-- My objects -->
-      <div class="col s6">
-        <!-- Collection my objects -->
-        <ul class="collection with-header">
-          <!-- Header Collection -->
-          <li class="collection-header"><h4>Mis cosas</h4></li>
-          <!-- Body Collection -->
-          @foreach($from->objects as $object)
-          <li class="collection-item avatar">
-            {!! Html::image('img/objects/'.$object->id.'.jpg', 'img', array('class' => 'circle materialboxed')) !!}
-            <span class="title">{{$object->name}}</span>
-            <p>Categoria: {{$object->category->name}} <br>
-               Valor aprox: ${{$object->value}}
-            </p>
-            <p class="secondary-content">
-              <input type="checkbox" class="left" id="left{{$itl}}" name="left{{$itl}}" value="{{$object->id}}" />
-              <label for="left{{$itl++}}"></label>
-            </p>
-          </li>
-          @endforeach
-        </ul>
+<!-- Modal Structure -->
+<div id="modal1" class="modal bottom-sheet modal-fixed-footer">
+  <!-- Modal body -->
+  <div class="modal-content">
+    <form action="/exchange/{{$to->id}}" id="form-exchange">
+      <div class="row">
+        <!-- My section -->
+        <div class="col s6">
+          <!-- My Interests -->
+          <div class="center">
+            <h5>Intereses</h5>
+            <div>
+              @if (count($from->interests) == 0)
+              <div class="chip">
+                No tienes intereses
+              </div>
+              @else
+              @foreach($from->interests as $interest)
+              <div class="chip">
+                {{ $interest->name }}
+              </div>
+              @endforeach
+              @endif
+            </div>
+          </div>
+          <!-- My things -->
+          <ul class="collection with-header">
+            <!-- Header Collection -->
+            <li class="collection-header"><h4>Mis cosas</h4></li>
+            <!-- Body Collection -->
+            @foreach($from->objects as $object)
+            <li class="collection-item avatar">
+              {!! Html::image('img/objects/'.$object->id.'.jpg', 'img', array('class' => 'circle materialboxed')) !!}
+              <span class="title">{{$object->name}}</span>
+              <p>Categoria: {{$object->category->name}} <br>
+                 Valor aprox: ${{$object->value}}
+              </p>
+              <p class="secondary-content">
+                <input type="checkbox" class="left" id="left{{$itl}}" name="left{{$itl}}" value="{{$object->id}}" />
+                <label for="left{{$itl++}}"></label>
+              </p>
+            </li>
+            @endforeach
+          </ul>
+        </div>
+        <!-- Their section -->
+        <div class="col s6">
+          <!-- Their Interests -->
+          <div class="center">
+            <h5>Intereses</h5>
+            <div>
+              @foreach($to->interests as $interest)
+              <div class="chip">
+                {{ $interest->name }}
+              </div>
+              @endforeach
+            </div>
+          </div>
+          <!-- Their things -->
+          <ul class="collection with-header">
+            <!-- Header Collection -->
+            <li class="collection-header"><h4>Sus cosas</h4></li>
+            <!-- Body Collection -->
+            @foreach($to->objects as $object)
+            <li class="collection-item avatar">
+              {!! Html::image('img/objects/'.$object->id.'.jpg', 'img', array('class' => 'circle materialboxed')) !!}
+              <span class="title">{{$object->name}}</span>
+              <p>Categoria: {{$object->category->name}} <br>
+                 Valor aprox: ${{$object->value}}
+              </p>
+              <p class="secondary-content">
+                <input type="checkbox" class="right" id="right{{$itr}}" name="right{{$itr}}" value="{{$object->id}}" disabled/>
+                <label for="right{{$itr++}}"></label>
+              </p>
+            </li>
+            @endforeach
+          </ul>
+        </div>
       </div>
-      <!-- Their objects -->
-      <div class="col s6">
-        <!-- Collection their objects -->
-        <ul class="collection with-header">
-          <!-- Header Collection -->
-          <li class="collection-header"><h4>Sus cosas</h4></li>
-          <!-- Body Collection -->
-          @foreach($to->objects as $object)
-          <li class="collection-item avatar">
-            {!! Html::image('img/objects/'.$object->id.'.jpg', 'img', array('class' => 'circle materialboxed')) !!}
-            <span class="title">{{$object->name}}</span>
-            <p>Categoria: {{$object->category->name}} <br>
-               Valor aprox: ${{$object->value}}
-            </p>
-            <p class="secondary-content">
-              <input type="checkbox" class="right" id="right{{$itr}}" name="right{{$itr}}" value="{{$object->id}}" disabled/>
-              <label for="right{{$itr++}}"></label>
-            </p>
-          </li>
-          @endforeach
-        </ul>
-      </div>
+    </form>
+  </div>
+  <!-- Modal fixed footer -->
+  <div class="modal-footer">
+    <div class="center">
+      <a id="button-modal-footer" class="modal-close waves-effect waves-teal btn" onclick="main()">
+        Proponer
+      </a>
     </div>
-  </form>
+  </div>
 </div>
 @stop
 
 @section('script')
   {!! Html::script('js/barter.js') !!}
+  {!! Html::script('js/modal.js') !!}
 @stop

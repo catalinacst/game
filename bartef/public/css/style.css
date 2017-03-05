@@ -25,14 +25,15 @@
     transition: color .28s ease;
 }
 
-.inter{
-  height: 300px;
-	border: 1px solid;
-	border-radius: 25px;
-	padding-top: 1em;
-}
 
 /* EXCHANGE ZONE */
+
+.inter{
+  height: 300px;
+  border: 1px solid;
+  border-radius: 25px;
+  padding-top: 1em;
+}
 
 .sub-inter{
   margin-bottom: 10px;
@@ -42,19 +43,10 @@
 
 }
 
-.objects01{
-	background: url("../img/4.jpg");
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
+#modal1{
+	max-height: 80%;
 }
 
-.objects02{
-	background: url("../img/27.jpg");
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-}
-
-.imgbarter{
-  width: 100%;
-  height: 180px;
+#button-modal-footer {
+  float: none;
 }

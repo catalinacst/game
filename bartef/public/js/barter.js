@@ -82,6 +82,7 @@ function main() {
     console.log(obj.id, obj.value);
     $("#theirBoxes").append("<div class='col s2'><img src='http://localhost:8000/img/objects/"+idObj+".jpg' alt='img-"+idObj+"' class='sub-inter materialboxed'></div>");
   }
+  $("#myBoxes").append("<div class='col s1'><a class='waves-effect btn-floating btn-large waves-light' href='#modal1'><i class='material-icons'>add</i></a></div>");
   console.log();
   console.log(k);
   console.log(maxV);
