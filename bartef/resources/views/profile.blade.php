@@ -33,10 +33,12 @@
         @endforeach
       </div>
       <!-- Button -->
+      @if( $user->id != 1 )
       <div class="center">
         <br>
         <a class="waves-effect waves-light btn orange btn-large" href="/barter/{{$user->id}}">Intercambiar</a>
       </div>
+      @endif
       <!-- Button -->
       <div class="center">
         <br>
@@ -49,6 +51,15 @@
     <div class="col s12 m8 l9">
       <div class = "col s12 offset-s1">
         <div class="row">
+
+          @if(Session::has('message'))
+          <div class="card-panel light-green lighten-4">
+            <p class="green-text">
+              <i class="material-icons left">done</i>
+              <strong>{{ Session::get('message') }}</strong>
+            </p>
+          </div>
+          @endif
 
           <!-- Show the Objects -->
           <div id="objects" class="col s12">

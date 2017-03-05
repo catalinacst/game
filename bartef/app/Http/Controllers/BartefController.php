@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Session;
 use App\Http\Requests;
 use App\Category;
 use App\User;
@@ -110,6 +110,7 @@ class BartefController extends Controller
         $object->user_id = ($key[0] == 'l') ? $id : '1';
         $object->save();
       }
-      return redirect('show/'.$id);
+      Session::flash('message', 'Intercambio realizado correctamente.');
+      return redirect('show/1');
     }
 }

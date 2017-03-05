@@ -7,7 +7,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class User extends Authenticatable
 {
     public function objects() {
-      return $this->hasMany('App\Object');
+      return $this->hasMany('App\Object')->orderBy('updated_at', 'desc');
     }
 
     public function interests() {
