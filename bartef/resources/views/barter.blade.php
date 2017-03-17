@@ -14,7 +14,7 @@
       <!-- Username -->
       <h4 class="center">{{ $from->name }}</h4>
       <!-- Objects proposed -->
-      <div class="grey darken-1 inter">
+      <div class="grey lighten-2 inter">
         <div class="row" id="myBoxes">
           <!-- Boxes -->
 
@@ -32,7 +32,7 @@
       <!-- Username -->
       <h4 class="center">{{ $to->name }}</h4>
       <!-- Objects proposed -->
-      <div class="grey darken-1 inter">
+      <div class="grey lighten-2 inter">
         <div class="row" id="theirBoxes">
           <!-- Boxes -->
         </div>
