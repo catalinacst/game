@@ -14,7 +14,7 @@ class UsersTableSeeder extends Seeder
       DB::table('users')->delete();
 
       $users = array(
-        ['name' => 'default', 'password' => 'developer-bcc', 'created_at' => new DateTime, 'updated_at' => new DateTime],
+        ['name' => 'Usuario', 'created_at' => new DateTime, 'updated_at' => new DateTime],
         ['name' => 'Ana Alonso Lopez', 'created_at' => new DateTime, 'updated_at' => new DateTime],
         ['name' => 'Antonia Martínez García', 'created_at' => new DateTime, 'updated_at' => new DateTime],
         ['name' => 'Rick Harrison', 'created_at' => new DateTime, 'updated_at' => new DateTime],

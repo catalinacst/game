@@ -128,7 +128,7 @@ class BartefController extends Controller
      *
      */
     public function check(Request $request) {
-      if (Auth::attempt(['name' => 'default', 'password' => $request['password']]))
+      if (Auth::attempt(['password' => $request['password']]))
         return "YES";
       return "NO";
     }
