@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use Auth;
 use App\Http\Requests;
 use App\Category;
 use App\User;
@@ -112,5 +113,23 @@ class BartefController extends Controller
       }
       Session::flash('message', 'Intercambio realizado correctamente.');
       return redirect('show/1');
+    }
+
+    /**
+     *  Login: Show the form of login
+     *
+     */
+    public function login() {
+      return view('login');
+    }
+
+    /**
+     *  Check: Verify the password
+     *
+     */
+    public function check(Request $request) {
+      if (Auth::attempt(['password' => $request['password']]))
+        return "YES";
+      return "NO";
     }
 }

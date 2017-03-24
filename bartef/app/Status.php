@@ -2,10 +2,13 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class Status extends Model
+class Status extends Authenticatable
 {
+
+    protected $fillable = ['password'];
+
     /**
      * The table associated with the model.
      *
