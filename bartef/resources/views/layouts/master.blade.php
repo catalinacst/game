@@ -15,18 +15,24 @@
   <body>
 
     <!-- Navbar -->
-    <div class="navbar-fixed">
-      <nav class="teal lighten-2">
-        <div class="nav-wrapper container">
-          <a href="/welcome" class="brand-logo">Bartef</a>
-          <ul class="right hide-on-med-and-down">
-            <li><a href="/home">Inicio</a></li>
-            <li><a href="/show/1">Perfil</a></li>
-            <li><a href="#">Feedback</a></li>
-          </ul>
-        </div>
-      </nav>
-    </div>
+    <nav class="teal lighten-2">
+      <div class="nav-wrapper container">
+      <a href="/welcome" class="brand-logo">Bartef</  a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="/home">Inicio</a></li>
+          <li><a href="/show/1">Perfil</a></li>
+          <li><a href="#">Feedback</a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+          <li><a href="/home">Inicio</a></li>
+          <li><a href="/show/1">Perfil</a></li>
+          <li><a href="#">Feedback</a></li>
+        </ul>
+      </div>
+    </nav>
+
+
     @yield('content')
 
     <footer class="page-footer orange">
@@ -56,12 +62,14 @@
       </div>
     </footer>
 
-
+    <!-- Scripts -->
     <!-- Compiled and minified jQuery -->
     {!! Html::script('https://code.jquery.com/jquery-2.1.1.min.js') !!}
     <!-- Compiled and minified JavaScript -->
     {!! Html::script('https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js') !!}
-    <!-- Scripts -->
+    <!-- Navbar responsive -->
+    {!! Html::script('js/modal.js') !!}
+
     @yield('script')
   </body>
 </html>
