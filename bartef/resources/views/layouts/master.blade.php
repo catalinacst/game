@@ -15,17 +15,18 @@
   <body>
 
     <!-- Navbar -->
-    <nav class="teal lighten-2">
-      <div class="nav-wrapper container">
-        <a href="/welcome" class="brand-logo">Bartef</a>
-        <ul class="right hide-on-med-and-down">
-          <li><a href="/home">Inicio</a></li>
-          <li><a href="/show/1">Perfil</a></li>
-          <li><a href="#">Feedback</a></li>
-        </ul>
-      </div>
-    </nav>
-
+    <div class="navbar-fixed">
+      <nav class="teal lighten-2">
+        <div class="nav-wrapper container">
+          <a href="/welcome" class="brand-logo">Bartef</a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="/home">Inicio</a></li>
+            <li><a href="/show/1">Perfil</a></li>
+            <li><a href="#">Feedback</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
     @yield('content')
 
     <footer class="page-footer orange">
