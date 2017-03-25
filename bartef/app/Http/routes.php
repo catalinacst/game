@@ -11,7 +11,10 @@
 |
 */
 
-Route::get('/', 'BartefController@index');
+Route::get('login', 'AuthController@login');
+Route::post('login', 'AuthController@check');
+Route::get('logout', 'AuthController@logout');
+
 Route::get('welcome', 'BartefController@welcome');
 Route::get('store', 'BartefController@store');
 Route::get('home', 'BartefController@home');
@@ -19,5 +22,3 @@ Route::get('show/{id}', 'BartefController@show');
 Route::get('barter/{id}', 'BartefController@barter');
 Route::get('interests/{id}', 'BartefController@interests');
 Route::get('exchange/{id}', 'BartefController@exchange');
-Route::get('login', 'BartefController@login');
-Route::post('check', 'BartefController@check');

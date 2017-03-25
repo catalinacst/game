@@ -12,12 +12,8 @@ use App\Object;
 
 class BartefController extends Controller
 {
-    /**
-     *  Redirect to welcome
-     *
-     */
-    public function index() {
-      return redirect('welcome');
+    public function __construct() {
+      $this->middleware('auth');
     }
 
     /**
@@ -113,24 +109,6 @@ class BartefController extends Controller
       }
       Session::flash('message', 'Intercambio realizado correctamente.');
       return redirect('show/1');
-    }
-
-    /**
-     *  Login: Show the form of login
-     *
-     */
-    public function login() {
-      return view('login');
-    }
-
-    /**
-     *  Check: Verify the password
-     *
-     */
-    public function check(Request $request) {
-      if (Auth::attempt(['password' => $request['password']]))
-        return "YES";
-      return "NO";
     }
 
     /**
