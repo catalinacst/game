@@ -14,6 +14,9 @@
 Route::get('login', 'AuthController@login');
 Route::post('login', 'AuthController@check');
 Route::get('logout', 'AuthController@logout');
+Route::get('generate', 'AuthController@generate');
+Route::post('generate', 'AuthController@store');
+Route::get('refresh', 'AuthController@refresh');
 
 Route::get('welcome', 'BartefController@welcome');
 Route::get('store', 'BartefController@store');
