@@ -16,6 +16,7 @@ class CreateStatusTable extends Migration
             $table->increments('id');
             $table->integer('flag');
             $table->string('password');
+            $table->rememberToken();
             $table->timestamps();
         });
     }

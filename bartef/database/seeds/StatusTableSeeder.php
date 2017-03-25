@@ -14,7 +14,7 @@ class StatusTableSeeder extends Seeder
       DB::table('status')->delete();
 
       $status = array(
-        ['flag' => 0, 'password' => 'developer-bcc']
+        ['flag' => 0, 'password' => Hash::make('developerbcc')]
       );
 
       DB::table('status')->insert($status);
