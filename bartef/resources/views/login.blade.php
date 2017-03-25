@@ -22,7 +22,7 @@
         <h5 class="header center light">Ingresa tu contraseña de invitado</h5>
 
         <!-- Form Sign In -->
-        {!! Form::open(['action' => 'BartefController@check', 'method' => 'POST']) !!}
+        {!! Form::open(['action' => 'AuthController@check', 'method' => 'POST']) !!}
 
           <div class="row">
             <div class="input-field col offset-s4 s4">
