@@ -20,15 +20,14 @@
       <a href="/welcome" class="brand-logo">Bartef</  a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="/home">Inicio</a></li>
+          <li><a href="/home">Explorar</a></li>
           <li><a href="/show/1">Perfil</a></li>
-          <li><a href="#">Feedback</a></li>
           <li><a href="/logout">Salir</a></li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
-          <li><a href="/home">Inicio</a></li>
+          <li><a href="/home">Explorar</a></li>
           <li><a href="/show/1">Perfil</a></li>
-          <li><a href="#">Feedback</a></li>
+          <li><a href="/logout">Salir</a></li>
         </ul>
       </div>
     </nav>
