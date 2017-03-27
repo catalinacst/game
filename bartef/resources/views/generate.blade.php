@@ -47,8 +47,6 @@
               {!! Form::text('newpass', '', ['id' => 'newpass', 'class' => 'validate']) !!}
               {!! Form::label('newpass', 'Nueva contraseña') !!}
             </div>
-            <!-- Accept -->
-            {!! Form::submit('Aceptar', ['class' => 'btn btn-large waves-effect waves-light orange']) !!}
             <br><br>
             <!-- Random -->
             <a class="waves-effect waves-light btn teal lighten-2" onclick="random()">
