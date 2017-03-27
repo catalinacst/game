@@ -11,6 +11,7 @@
 |
 */
 
+Route::get('/', 'AuthController@login');
 Route::get('login', 'AuthController@login');
 Route::post('login', 'AuthController@check');
 Route::get('logout', 'AuthController@logout');
