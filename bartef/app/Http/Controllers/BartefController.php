@@ -12,12 +12,8 @@ use App\Object;
 
 class BartefController extends Controller
 {
-    /**
-     *  Redirect to welcome
-     *
-     */
-    public function index() {
-      return redirect('welcome');
+    public function __construct() {
+      $this->middleware('auth');
     }
 
     /**
@@ -116,25 +112,7 @@ class BartefController extends Controller
     }
 
     /**
-     *  Login: Show the form of login
-     *
-     */
-    public function login() {
-      return view('login');
-    }
-
-    /**
-     *  Check: Verify the password
-     *
-     */
-    public function check(Request $request) {
-      if (Auth::attempt(['password' => $request['password']]))
-        return "YES";
-      return "NO";
-    }
-
-    /**
-     *  Reset
+     *  Reset the initial objects
      *
     */
     public function reset(){
@@ -143,6 +121,13 @@ class BartefController extends Controller
                      7, 2, 1, 2, 5, 9, 1, 6, 6, 4, 6, 7, 5, 8, 5, 6, 4,
                      6, 1, 7, 6, 8, 2, 2, 1, 5, 5, 6, 8, 9, 4, 1, 2, 5,
                      7, 7, 1, 9);
+      foreach ($array as $key => $value) {
+        $obj = Object::find($key + 1);
+        $obj->user_id = $value;
+        $obj->save();
+      }
+      Session::flash('message', 'Se reiniciaron los objetos correctamente.');
+      return redirect('/show/1');
     }
 
 }

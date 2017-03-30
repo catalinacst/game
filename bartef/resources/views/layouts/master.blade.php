@@ -20,14 +20,14 @@
       <a href="/welcome" class="brand-logo">Bartef</  a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="/home">Inicio</a></li>
+          <li><a href="/home">Explorar</a></li>
           <li><a href="/show/1">Perfil</a></li>
-          <li><a href="#">Feedback</a></li>
+          <li><a href="/logout">Salir</a></li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
-          <li><a href="/home">Inicio</a></li>
+          <li><a href="/home">Explorar</a></li>
           <li><a href="/show/1">Perfil</a></li>
-          <li><a href="#">Feedback</a></li>
+          <li><a href="/logout">Salir</a></li>
         </ul>
       </div>
     </nav>
@@ -36,25 +36,6 @@
     @yield('content')
 
     <footer class="page-footer orange">
-      <!--
-      <div class="container">
-        <div class="row">
-          <div class="col l6 s12">
-            <h5 class="white-text">Footer Content</h5>
-            <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-          </div>
-          <div class="col l4 offset-l2 s12">
-            <h5 class="white-text">Links</h5>
-            <ul>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      -->
       <div class="footer-copyright">
         <div class="container">
         Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
