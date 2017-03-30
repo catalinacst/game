@@ -35,7 +35,7 @@
     <!-- Botones -->
     <div class="row">
       <div class="col s6">
-        <div class="fixed-action-btn vertical">
+        <div class="fixed-action-btn vertical click-to-toggle">
           <a class="btn-floating btn-large teal lighten-2">
             <i class="large material-icons">dashboard</i>
           </a>
