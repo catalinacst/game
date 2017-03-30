@@ -20,9 +20,9 @@
       <a href="/welcome" class="brand-logo">Bartef</  a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="/home">Explorar</a></li>
-          <li><a href="/show/1">Perfil</a></li>
-          <li><a href="/logout">Salir</a></li>
+          <li> <b> <a href="/show/1">Perfil</a> </b> </li>
+          <li> <b> <a href="/home">Explorar</a> </b> </li>
+          <li> <b> <a href="/logout">Salir</a> </b> </li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
           <li><a href="/home">Explorar</a></li>
@@ -31,6 +31,23 @@
         </ul>
       </div>
     </nav>
+
+    <!-- Botones -->
+    <div class="row">
+      <div class="col s6">
+        <div class="fixed-action-btn vertical">
+          <a class="btn-floating btn-large teal lighten-2">
+            <i class="large material-icons">dashboard</i>
+          </a>
+          <ul>
+            <li><a class="btn-floating btn-large yellow darken-1"><i class="large material-icons">comment</i></a> Formulario</li>
+            <li><a class="btn-floating btn-large green"><i class="large material-icons">replay</i></a> Resetear</li>
+            <!-- Modal Trigger -->
+            <li><a class="btn-floating btn-large modal-trigger blue" href="#modal1"><i class="large material-icons">visibility</i></a> Camino</li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
 
     @yield('content')
