@@ -25,8 +25,8 @@
           <li> <b> <a href="/logout">Salir</a> </b> </li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
-          <li><a href="/home">Explorar</a></li>
           <li><a href="/show/1">Perfil</a></li>
+          <li><a href="/home">Explorar</a></li>
           <li><a href="/logout">Salir</a></li>
         </ul>
       </div>
@@ -41,7 +41,7 @@
           </a>
           <ul>
             <li><a class="btn-floating btn-large yellow darken-1"><i class="large material-icons">comment</i></a> Formulario</li>
-            <li><a class="btn-floating btn-large green"><i class="large material-icons">replay</i></a> Resetear</li>
+            <li><a class="btn-floating btn-large green" href="/reset"><i class="large material-icons">replay</i></a> Resetear</li>
             <!-- Modal Trigger -->
             <li><a class="btn-floating btn-large modal-trigger blue" href="#modal1"><i class="large material-icons">visibility</i></a> Camino</li>
           </ul>
