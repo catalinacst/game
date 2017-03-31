@@ -43,10 +43,14 @@
 
 }
 
-#modal1{
+#modal1, #path{
 	max-height: 80%;
 }
 
 #button-modal-footer {
   float: none;
+}
+
+.sizeimg{
+	height: 80px;
 }
