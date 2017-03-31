@@ -6,7 +6,8 @@
 <!-- Exchange zone -->
 <div class = "section">
   <!-- User id -->
-  <input type="hidden" id="idUser" value="{{$to->id}}">
+  <input type="hidden" id="route" value="{{ route('interests', $to->id) }}">
+  <input type="hidden" id="asset" value="{{ asset('') }}">
   <!-- Usernames and objects proposed -->
   <div class="row">
     <!--- User 1 -->

@@ -3,10 +3,10 @@ var k, maxV, maxW, ans;
 var value = new Array(); // value[] -> valor de los objetos desde el punto de vista de el usuario
 var weight = new Array(); // weight[] -> valor de los objetos desde el punto de vista de la maquina
 
-var idUser = document.getElementById('idUser').value, numCategories;
+var numCategories;
 var numMyInterest = 0, myObjects = new Array(), myInterests = new Array();
 var numTheirInterest = 0, theirObjects = new Array(), theirInterests = new Array();
-var route = 'http://localhost:8000/interests/'+idUser;
+var route = $('#route').val(), asset = $('#asset').val();
 
 $.get(route, function(res) {
   n = res[2].length;
@@ -63,7 +63,7 @@ function main() {
   $("#theirBoxes").empty();
 	$('.left:checked').each(function() {
     var idObj = $(this).val();
-    $("#myBoxes").append("<div class='col s2'><img src='http://localhost:8000/img/objects/"+idObj+".jpg' alt='img-"+idObj+"' class='sub-inter materialboxed'></div>");
+    $("#myBoxes").append("<div class='col s2'><img src='"+asset+"img/objects/"+idObj+".jpg' alt='img-"+idObj+"' class='sub-inter materialboxed'></div>");
     var obj = myObjects[idObj];
     console.log(obj.id, obj.value);
     var x = Number(obj.value);
@@ -80,7 +80,7 @@ function main() {
     var idObj = $('#right'+i).val();
     var obj = theirObjects[idObj];
     console.log(obj.id, obj.value);
-    $("#theirBoxes").append("<div class='col s2'><img src='http://localhost:8000/img/objects/"+idObj+".jpg' alt='img-"+idObj+"' class='sub-inter materialboxed'></div>");
+    $("#theirBoxes").append("<div class='col s2'><img src='"+asset+"img/objects/"+idObj+".jpg' alt='img-"+idObj+"' class='sub-inter materialboxed'></div>");
   }
   $("#myBoxes").append("<div class='col s1'><a class='waves-effect btn-floating btn-large waves-light' href='#modal1'><i class='material-icons'>add</i></a></div>");
   console.log();

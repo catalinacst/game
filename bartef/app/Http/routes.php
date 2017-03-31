@@ -25,6 +25,6 @@ Route::get('store', 'BartefController@store');
 Route::get('home', 'BartefController@home');
 Route::get('show/{id}', 'BartefController@show');
 Route::get('barter/{id}', 'BartefController@barter');
-Route::get('interests/{id}', 'BartefController@interests');
+Route::get('interests/{id}', 'BartefController@interests')->name('interests');
 Route::get('exchange/{id}', 'BartefController@exchange');
 Route::get('reset', 'BartefController@reset');
