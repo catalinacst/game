@@ -17,6 +17,14 @@ class BartefController extends Controller
     }
 
     /**
+     *  Introduction: Show the introduction information
+     *
+     */
+    public function introduction() {
+      return view('introduction');
+    }
+
+    /**
      *  Display form username and interests
      *
      */

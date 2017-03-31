@@ -14,6 +14,14 @@ use App\Object;
 class AuthController extends Controller
 {
     /**
+     *  Inded: Redirect to login
+     *
+     */
+    public function index() {
+      return redirect('/login');
+    }
+
+    /**
      *  Login: Show the form of login
      *
      */
@@ -27,7 +35,7 @@ class AuthController extends Controller
      */
     public function check(Request $request) {
       if (Auth::attempt(['password' => $request['password']]) and Status::find('1')->flag == 1)
-        return redirect('/welcome');
+        return redirect('/introduction');
       return redirect('/login');
     }
 
