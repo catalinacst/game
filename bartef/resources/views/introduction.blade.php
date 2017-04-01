@@ -1,9 +1,8 @@
-@extends('layouts.master')
+@extends('layouts.template')
 
 @section('title', 'Introducción')
 
 @section('content')
-
 <div class="section">
   <div class="container">
     <br>

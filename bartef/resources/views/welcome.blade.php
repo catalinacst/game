@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.template')
 
 @section('title', 'Welcome')
 
@@ -13,7 +13,8 @@
 
     <!-- Introduction text -->
     <h5 class="header center light">Ingresa tu nombre de usuario y tus intereses</h5>
-
+    <br>
+    <br>
     <!-- Form username and interests -->
     <div class="row center">
       <form action="store" class="col s12" id="form-get-started">
