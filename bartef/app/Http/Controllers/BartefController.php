@@ -138,4 +138,13 @@ class BartefController extends Controller
       return redirect('/show/1');
     }
 
+    /**
+     *  Feedback: Logout and reditect to the feedback
+     *
+    */
+    public function feedback(){
+      Auth::logout();
+      return redirect('https://goo.gl/forms/Fo5EaXyfEPkiEDrJ3');
+    }
+
 }

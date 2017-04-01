@@ -28,3 +28,4 @@ Route::get('barter/{id}', 'BartefController@barter');
 Route::get('interests/{id}', 'BartefController@interests')->name('interests');
 Route::get('exchange/{id}', 'BartefController@exchange');
 Route::get('reset', 'BartefController@reset');
+Route::get('feedback', 'BartefController@feedback');
