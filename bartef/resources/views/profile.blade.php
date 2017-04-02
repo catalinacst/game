@@ -49,7 +49,7 @@
 
     <!-- Objetos -->
     <div class="col s12 m8 l9">
-      <div class = "col s12 offset-s1">
+      <div class = "col s11 offset-s1">
         <div class="row">
 
           @if(Session::has('message'))
@@ -66,7 +66,7 @@
             <br>
             <div class="row">
               @foreach($user->objects as $object)
-              <div class = "col s4">
+              <div class = "col l4 m6 s6">
                 <div class="card small">
                   <div class="card-image waves-effect waves-block waves-light imgbarter">
                     {!! Html::image('img/objects/'.$object->id.'.jpg', 'objectimg', array('class' => 'imgbarter')) !!}
