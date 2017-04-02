@@ -23,9 +23,9 @@
 <div class="fixed-action-btn vertical click-to-toggle">
   <a class="btn-floating btn-large teal lighten-2"><i class="large material-icons">dashboard</i></a>
   <ul>
-    <li><a class="btn-floating btn-large yellow darken-1" href="/feedback"><i class="large material-icons">comment</i></a></li>
-    <li><a class="btn-floating btn-large green" href="/reset"><i class="large material-icons">replay</i></a></li>
-    <li><a class="btn-floating btn-large modal-trigger blue" href="#path"><i class="large material-icons">visibility</i></a></li>
+    <li><a class="btn-floating btn-large yellow darken-1" href="/feedback"><i class="large material-icons">comment</i></a>Encuesta</li>
+    <li><a class="btn-floating btn-large green" href="/reset"><i class="large material-icons">replay</i></a>Resetear</li>
+    <li><a class="btn-floating btn-large modal-trigger blue" href="#path"><i class="large material-icons">visibility</i></a>Camino</li>
   </ul>
 </div>
 <!-- Modal Structure -->
