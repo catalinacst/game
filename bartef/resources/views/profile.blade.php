@@ -72,7 +72,7 @@
                     {!! Html::image('img/objects/'.$object->id.'.jpg', 'objectimg', array('class' => 'imgbarter')) !!}
                   </div>
                   <div class="card-content">
-                    <h5>{{ $object->name }}</h5>
+                    <h6>{{ $object->name }} </h6>
                     <p class="light">{{ $object->category->name }}</p>
                   </div>
                 </div>
