@@ -40,9 +40,9 @@
         @for($i = 1, $size = count($users); $i < $size; $i++)
         <div class = "col s4">
           <div class="card medium">
-            <div class="card-image waves-effect waves-block waves-light">
+            <div class="card-image waves-effect waves-block waves-light" style="height: 60%;">
               <a href="show/{{$users[$i]->id}}">
-                {!! Html::image('img/users/'.$users[$i]->id.'.jpg', 'userimg', array('class' => 'responsive-img')) !!}
+                {!! Html::image('img/users/'.$users[$i]->id.'.jpg', 'userimg', array('class' => 'responsive-img', 'style' => 'height: 100%;')) !!}
               </a>
             </div>
             <div class="card-content">

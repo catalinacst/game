@@ -28,8 +28,10 @@ $.get(route, function(res) {
   res[2].forEach(function(object) {
     theirObjects[object.id] = object;
     var v = Number(object.value);
+    /*
     if (myInterests[object.category_id])
       v *= 2 - numMyInterest / numCategories;
+    */
     value.push(v);
     var w = Number(object.value);
     if (theirInterests[object.category_id])

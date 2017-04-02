@@ -37,7 +37,7 @@ class ObjectsTableSeeder extends Seeder
         ['name' => 'Dron Skyhawkey', 'value' => 450, 'category_id' => 15, 'user_id' => 7, 'created_at' => new DateTime, 'updated_at' => new DateTime],
         ['name' => 'Reloj Azul Tommy Hilfiger', 'value' => 1000, 'category_id' => 6, 'user_id' => 5, 'created_at' => new DateTime, 'updated_at' => new DateTime],
         ['name' => 'Nevera Abba', 'value' => 740, 'category_id' => 4, 'user_id' => 6, 'created_at' => new DateTime, 'updated_at' => new DateTime],
-        ['name' => 'Libro Harry Potter autografiado por J. K. Rowling', 'value' => 10000, 'category_id' => 8, 'user_id' => 3, 'created_at' => new DateTime, 'updated_at' => new DateTime],
+        ['name' => 'Libro Harry Potter autografiado por J. K. Rowling', 'value' => 10000, 'category_id' => 7, 'user_id' => 3, 'created_at' => new DateTime, 'updated_at' => new DateTime],
         ['name' => 'Uno', 'value' => 28, 'category_id' => 12, 'user_id' => 4, 'created_at' => new DateTime, 'updated_at' => new DateTime],
         ['name' => 'Soporte magnetico para auto', 'value' => 50, 'category_id' => 3, 'user_id' => 6, 'created_at' => new DateTime, 'updated_at' => new DateTime],
         ['name' => 'Introduction to algorithms 3rd Edition', 'value' => 110, 'category_id' => 8, 'user_id' => 3, 'created_at' => new DateTime, 'updated_at' => new DateTime],

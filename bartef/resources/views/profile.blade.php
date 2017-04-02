@@ -71,7 +71,7 @@
                   <div class="card-image waves-effect waves-block waves-light imgbarter">
                     {!! Html::image('img/objects/'.$object->id.'.jpg', 'objectimg', array('class' => 'imgbarter')) !!}
                   </div>
-                  <div class="card-content">
+                  <div class="card-content" style="padding: 10px;">
                     <h6>{{ $object->name }} </h6>
                     <p class="light">{{ $object->category->name }}</p>
                   </div>

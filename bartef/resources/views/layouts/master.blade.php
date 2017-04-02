@@ -36,6 +36,7 @@
       <div class="row">
         <div class="col s6">
 
+          <p class="center"><b>Intercambio #1</b></p>
           <div class="row">
             <div class="col s2 offset-s4 objects">
               <img class="responsive-img materialboxed" src="{!! asset('img/objects/71.jpg') !!}">
@@ -49,6 +50,8 @@
           </div>
 
           <hr class="style1"> <br>
+
+          <p class="center"><b>Intercambio #2</b></p>
           <div class="row">
             <div class="col s2 offset-s4 objects">
               <img class="responsive-img materialboxed" src="{!! asset('img/objects/20.jpg') !!}">
@@ -62,6 +65,8 @@
           </div>
 
           <hr class="style1"> <br>
+
+          <p class="center"><b>Intercambio #3</b></p>
           <div class="row">
             <div class="col s2 offset-s4 objects">
               <img class="responsive-img materialboxed" src="{!! asset('img/objects/37.jpg') !!}">
@@ -76,6 +81,7 @@
 
           <hr class="style1"> <br>
 
+          <p class="center"><b>Intercambio #4</b></p>
           <div class="row">
             <div class="col s2 objects">
               <img class="responsive-img materialboxed" src="{!! asset('img/objects/38.jpg') !!}">
@@ -101,6 +107,8 @@
 
 
           <hr class="style1"> <br>
+
+          <p class="center"><b>Intercambio #5</b></p>
           <div class="row">
             <div class="col s2 objects">
               <img class="responsive-img materialboxed" src="{!! asset('img/objects/31.jpg') !!}">
@@ -134,6 +142,7 @@
 
         <div class="col s6">
 
+          <p class="center"><b>Intercambio #6</b></p>
           <div class="row">
             <div class="col s2 offset-s1 objects">
               <img class="responsive-img materialboxed" src="{!! asset('img/objects/15.jpg') !!}">
@@ -153,6 +162,8 @@
           </div>
 
           <hr class="style1"> <br>
+
+          <p class="center"><b>Intercambio #7</b></p>
           <div class="row">
             <div class="col s2 offset-s3 objects">
               <img class="responsive-img materialboxed" src="{!! asset('img/objects/62.jpg') !!}">
@@ -169,6 +180,8 @@
           </div>
 
           <hr class="style1"> <br>
+
+          <p class="center"><b>Intercambio #8</b></p>
           <div class="row">
             <div class="col s2 offset-s5 objects">
               <img class="responsive-img materialboxed" src="{!! asset('img/objects/32.jpg') !!}">
@@ -182,6 +195,8 @@
           </div>
 
           <hr class="style1"> <br>
+
+          <p class="center"><b>Intercambio #9</b></p>
           <div class="row">
             <div class="col s2 offset-s3 objects">
               <img class="responsive-img materialboxed" src="{!! asset('img/objects/56.jpg') !!}">
@@ -198,6 +213,7 @@
           </div>
 
           <hr class="style1"> <br> <br>
+
           <div class="row">
             <div class="col s9">
               <div class="modal-footer">
