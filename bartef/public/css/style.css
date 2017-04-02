@@ -43,8 +43,12 @@
 
 }
 
-#modal1, #path{
+#modal1{
 	max-height: 80%;
+}
+
+#path{
+	max-height: 93%;
 }
 
 #button-modal-footer {
@@ -55,6 +59,20 @@
   	height: 90%;
 }
 
-.sizeimg{
-	height: 80px;
+/* PATH */
+
+div.objects img {
+    width: 80px;
+    height: 80px;
+}
+
+div.users img {
+    width: 70px;
+    height: 90px;
+}
+
+hr.style1{
+  height: 8px;
+	border: 0;
+	box-shadow: 0 6px 6px -6px #8c8b8b inset;
 }
