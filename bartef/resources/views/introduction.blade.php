@@ -6,17 +6,34 @@
 <div class="section">
   <div class="container">
     <br>
-    <h2 class="light header">Sobre nosotros.</h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non ornare justo.
-      Nunc mattis justo sagittis massa bibendum, in accumsan lorem mattis. In hac habitasse
-      platea dictumst. Donec lobortis dolor sed purus ornare, ut posuere massa convallis.
-      Aliquam vel leo nec mi malesuada laoreet. In nec urna et nunc aliquet interdum. Aliquam sem nulla,
-      fermentum non nibh vitae, volutpat sodales massa. Nunc non tellus tempor, interdum orci et, tristique
-      felis.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra erat vitae dui feugiat,
-      nec congue nisi venenatis. Mauris eleifend velit a tellus faucibus.
-    </p>
+    <h2 class="light header">Instrucciones.</h2>
+    <div>
+      <h5>Como jugar</h5>
+      El juego consiste en interactuar con otros usuarios por medio de
+      intercambios de objetos. Inicialmente cada usuario tendra un conjunto
+      de objetos con los que esta dispuesto a realizar cambios justos, es decir,
+      que los objetos que le ofrece una persona a la otra son de su interes y
+      son de valores muy similares.
+      Inicialmente usted podra escoger su nombre de usuario y la categoria de
+      los objetos de sus intereses.
+      <h5>Objetivo</h5>
+      Como cualquir persona, siempre se busca ganar algo al realizar un
+      negocio, el objetivo del juego es maximizar el valor de sus pertenencias,
+      negociando con los otros usuarios, es decir, realizando buenos
+      intercambios.<br>
+      <b>Es garantizado que existe una manera de conseguir un automovil con sus
+      objetos iniciales, este es el logro final.</b>
+      <h5>Recomendaciones</h5>
+      <ol>
+        <li>Tenga en cuenta que algunas personas se interesan mas por unos
+        objetos que por otros, use esta particular propiedad para conseguir
+        su objetivo.</li>
+        <li>No siempre es mejor ofrecer muchos objetos de gran valor,
+        a ofrecer un simple objeto a la pesona indicada.</li>
+        <li>Conseguir un objeto de su interes le puede llevar mas de un
+        intercambio.</li>
+      </ol>
+    </div>
   </div>
 </div>
 <br>
@@ -36,12 +53,12 @@
       <p class="flow-text center">Feedback
       <a class="btn-floating btn-large waves-effect waves-light yellow"><i class="large material-icons">comment</i></a></p>
         <blockquote>
-          <b> Deseas contestar nuestra encuesta? </b>
+          <b> ¿Deseas contestar nuestra encuesta? </b>
           <br>
-          Después de haber realizado los intercambios deseados y de sentir que cumpliste tu objetivo.
           <br>
-          Nos puedes contestar una pequeña encuesta.
-          <br>
+          Tu opinion es muy importante para nosotros! por eso te invitamos
+          a realizar nuestra encuesta cuando sientas que ya cumpliste tu
+          objetivo.
           <br>
           <br>
           <b> Vamos por ello! </b>
@@ -52,11 +69,11 @@
       <p class="flow-text center">Resetear
       <a class="btn-floating btn-large waves-effect waves-light green"><i class="large material-icons">replay</i></a></p>
         <blockquote>
-          <b> Deseas volver a empezar? </b>
+          <b> ¿Deseas volver a empezar? </b>
           <br>
           Si en algún momento quieres volver a empezar, o realizaste un intercambio no deseado.
           <br>
-          Te damos la posibilidad que puedas volver a empezar! Devolviendo los objetos a su dueño principal.
+          Te damos la posibilidad que puedas volver a empezar! Devolviendo los objetos a su dueño inicial.
           <br>
           <br>
           <b> Vamos por ello! </b>
@@ -67,7 +84,7 @@
       <p class="flow-text center">Camino
       <a class="btn-floating btn-large waves-effect waves-light blue"><i class="large material-icons">visibility</i></a></p>
         <blockquote>
-          <b> Deseas conocer los intercambios correctos? </b>
+          <b> ¿Deseas conocer los intercambios correctos? </b>
           <br>
           Te ofrecemos la posibilidad de que conozcas un camino mostrandote los intercambios necesarios
           para que llegues al objeto sorpresa!
