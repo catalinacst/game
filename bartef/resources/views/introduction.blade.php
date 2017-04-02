@@ -15,7 +15,7 @@
     <h2 class="light header center">Instrucciones</h2>
     <div>
       <div class="row">
-        <div class="col s6">
+        <div class="col s12 l6">
           <h5>¿Como jugar?  <i class="material-icons small">info_outline</i> </h5>
           <blockquote>
             <p class = "psize flow-text">El juego consiste en interactuar con otros usuarios por medio de
@@ -26,7 +26,7 @@
             </p>
           </blockquote>
         </div>
-        <div class="col s6">
+        <div class="col s12 l6">
           <h5>Objetivo  <i class="material-icons small">search</i> </h5>
           <blockquote>
             <p class = "psize flow-text">Como cualquir persona, siempre se busca ganar algo al realizar un
@@ -40,7 +40,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col s7 offset-s3">
+        <div class="col l7 offset-l3 s12">
           <h5>Recomendaciones  <i class="material-icons small">description</i> </h5>
           <blockquote>
               <ol>
@@ -77,7 +77,7 @@
 <br>
 <div class="section">
   <div class="row">
-    <div class="col s10">
+    <div class="col s12 l12">
       <h5 class="light header">En este botón
         <a class="btn-floating btn-large teal lighten-2">
           <i class="medium material-icons">dashboard</i>
@@ -88,7 +88,7 @@
 
   <div class="row">
     <!-- Feedback -->
-    <div class="col s4">
+    <div class="col s12 l4">
       <p class="flow-text">Feedback
       <a class="btn-floating btn-large waves-effect waves-light yellow"><i class="large material-icons">comment</i></a></p>
         <blockquote>
@@ -106,7 +106,7 @@
         </blockquote>
     </div>
     <!-- Reset -->
-    <div class="col s4">
+    <div class="col s12 l4">
       <p class="flow-text">Resetear
       <a class="btn-floating btn-large waves-effect waves-light green"><i class="large material-icons">replay</i></a></p>
         <blockquote>
@@ -124,7 +124,7 @@
         </blockquote>
     </div>
     <!-- Path -->
-    <div class="col s4">
+    <div class="col s12 l4">
       <p class="flow-text">Camino
       <a class="btn-floating btn-large waves-effect waves-light blue"><i class="large material-icons">visibility</i></a></p>
         <blockquote>
