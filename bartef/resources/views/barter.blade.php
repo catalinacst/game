@@ -60,7 +60,7 @@
     <form action="/exchange/{{$to->id}}" id="form-exchange">
       <div class="row">
         <!-- My section -->
-        <div class="col s6">
+        <div class="col l6 s12">
           <!-- My Interests -->
           <div class="center">
             <h5>Intereses</h5>
@@ -86,7 +86,8 @@
             @foreach($from->objects as $object)
             <li class="collection-item avatar">
               {!! Html::image('img/objects/'.$object->id.'.jpg', 'img', array('class' => 'circle materialboxed')) !!}
-              <span class="title">{{$object->name}}</span>
+              <p> <b> {{$object->name}} </b> </p>
+              <!-- <span class="title">{{$object->name}}</span> -->
               <p>Categoria: {{$object->category->name}} <br>
                  Valor aprox: ${{$object->value}}
               </p>
