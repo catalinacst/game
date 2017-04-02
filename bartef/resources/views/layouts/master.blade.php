@@ -34,7 +34,7 @@
     <center> <h3 class="Bold">Camino</h3> </center>
     <div class="container">
       <div class="row">
-        <div class="col s6">
+        <div class="col l6 s12">
 
           <p class="center"><b>Intercambio #1</b></p>
           <div class="row">
@@ -140,7 +140,7 @@
 
         </div>
 
-        <div class="col s6">
+        <div class="col l6 s12">
 
           <p class="center"><b>Intercambio #6</b></p>
           <div class="row">

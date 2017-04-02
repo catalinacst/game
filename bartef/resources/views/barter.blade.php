@@ -87,7 +87,6 @@
             <li class="collection-item avatar">
               {!! Html::image('img/objects/'.$object->id.'.jpg', 'img', array('class' => 'circle materialboxed')) !!}
               <p> <b> {{$object->name}} </b> </p>
-              <!-- <span class="title">{{$object->name}}</span> -->
               <p>Categoria: {{$object->category->name}} <br>
                  Valor aprox: ${{$object->value}}
               </p>
@@ -100,7 +99,7 @@
           </ul>
         </div>
         <!-- Their section -->
-        <div class="col s6">
+        <div class="col l6 s12">
           <!-- Their Interests -->
           <div class="center">
             <h5>Intereses</h5>
@@ -120,7 +119,7 @@
             @foreach($to->objects as $object)
             <li class="collection-item avatar">
               {!! Html::image('img/objects/'.$object->id.'.jpg', 'img', array('class' => 'circle materialboxed')) !!}
-              <span class="title">{{$object->name}}</span>
+              <p> <b> {{$object->name}} </b> </p>
               <p>Categoria: {{$object->category->name}} <br>
                  Valor aprox: ${{$object->value}}
               </p>
