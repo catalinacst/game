@@ -31,7 +31,7 @@
         <!-- Interests -->
         <div class="row">
         @for ($i = 0, $size = count($categories), $c = 'category0'; $i < $size; $i++, $c = 'category'.$i)
-          <div class="col s4">
+          <div class="col l4 m6 s12">
             <p>
               <input type="checkbox" id={{$c}} name={{$c}} />
               <label for={{$c}}>{{ $categories[$i]->name }}</label>
