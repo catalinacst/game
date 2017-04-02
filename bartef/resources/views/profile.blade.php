@@ -9,7 +9,7 @@
     <br><br>
 
     <!-- Show user name and image -->
-    <div class="col s12 m4 l3">
+    <div class="col s8 m4 l3">
       <div>
         <h3 class="center">Perfil</h4>
       </div>
