@@ -38,7 +38,7 @@
     <div class="col s12 m8 offset-l1 l8">
       <div class = "row">
         @for($i = 1, $size = count($users); $i < $size; $i++)
-        <div class = "col s4">
+        <div class = "col l4 m6 s6">
           <div class="card medium">
             <div class="card-image waves-effect waves-block waves-light" style="height: 60%;">
               <a href="show/{{$users[$i]->id}}">
@@ -46,7 +46,7 @@
               </a>
             </div>
             <div class="card-content">
-              <h5>{{ $users[$i]->name }}</h5>
+              <h6>{{ $users[$i]->name }}</h6>
             </div>
           </div>
         </div>
