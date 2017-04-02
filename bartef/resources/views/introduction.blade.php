@@ -16,7 +16,7 @@
     <div>
       <div class="row">
         <div class="col s12 l6">
-          <h5>¿Como jugar?  <i class="material-icons small">info_outline</i> </h5>
+          <h5>¿Cómo jugar?  <i class="material-icons small">info_outline</i> </h5>
           <blockquote>
             <p class = "psize flow-text">El juego consiste en interactuar con otros usuarios por medio de
             <b> intercambios de objetos. </b> Inicialmente cada usuario tendrá un conjunto
@@ -89,7 +89,7 @@
   <div class="row">
     <!-- Feedback -->
     <div class="col s12 l4">
-      <p class="flow-text">Feedback
+      <p class="flow-text">Encuesta
       <a class="btn-floating btn-large waves-effect waves-light yellow"><i class="large material-icons">comment</i></a></p>
         <blockquote>
           <p class = "psize flow-text">
@@ -99,6 +99,9 @@
             Tu opinion es muy importante para nosotros! por eso te invitamos
             a realizar nuestra encuesta cuando sientas que ya cumpliste tu
             objetivo.
+            Ten en cuenta que cuando desees contestar la encuesta, saldrás de la
+            página. Por eso, <b> solo responde el formulario cuando hayas interactuado
+            lo suficiente. </b>
             <br>
             <br>
             <b> Vamos por ello! </b>
